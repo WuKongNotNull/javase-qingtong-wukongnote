@@ -294,6 +294,7 @@ public class SortNum {
 <img src="../images/wps8390.tmp.jpg" alt="img" style="zoom:38%;" /> 
 
 （3）用java实现
+```
 
  package com.njue;  
 
@@ -330,6 +331,7 @@ public insertSort(){
 }  
 
 }
+```
 
 **2，希尔排序（最小增量排序）**
 
@@ -340,6 +342,7 @@ public insertSort(){
 <img src="../images/wps83A0.tmp.jpg" alt="img" style="zoom:38%;" /> 
 
 （3）用java实现
+```
 
 public class shellSort {  
 
@@ -390,6 +393,7 @@ public  shellSort(){
 }  
 
 }
+```
 
 **3.简单选择排序**
 
@@ -402,6 +406,7 @@ public  shellSort(){
 <img src="../images/wps83A1.tmp.jpg" alt="img" style="zoom:38%;" /> 
 
 （3）用java实现
+```
 
 public class selectSort {  
 
@@ -447,7 +452,7 @@ public class selectSort {
     }  
 
 }
-
+```
 **4，堆排序**
 
 （1）基本思想：堆排序是一种树形选择排序，是对直接选择排序的有效改进。
@@ -471,6 +476,7 @@ public class selectSort {
 依次类推：最后堆中剩余的最后两个结点交换，踢出一个，排序完成。
 
 （3）用java实现
+```
 
 import java.util.Arrays;  
 
@@ -514,7 +520,8 @@ public class HeapSort {
     }  
 
  
-
+```
+```java
 
     private  void swap(int[] data, int i, int j) {  
     
@@ -591,6 +598,7 @@ public class HeapSort {
     }
 
 }
+```
 
 **5.冒泡排序**
 
@@ -601,6 +609,7 @@ public class HeapSort {
 <img src="../images/wps83C5.tmp.jpg" alt="img" style="zoom:38%;" /> 
 
 （3）用java实现
+```
 
 public class bubbleSort {  
 
@@ -635,6 +644,7 @@ public  bubbleSort(){
 }  
 
 }
+```
 
 **6.快速排序**
 
@@ -645,6 +655,7 @@ public  bubbleSort(){
 <img src="../images/wps83D5.tmp.jpg" alt="img" style="zoom:38%;" /> 
 
 （3）用java实现
+```
 
 public class quickSort {  
 
@@ -718,6 +729,7 @@ public void quick(int[] a2) {
        }   
 
 }
+```
 
 **7、归并排序**
 
@@ -728,6 +740,7 @@ public void quick(int[] a2) {
 <img src="../images/wps83D6.tmp.jpg" alt="img" style="zoom:38%;" /> 
 
 **（3）用java实现**
+```
 
 import java.util.Arrays;  
 
@@ -838,6 +851,7 @@ public void merge(int[] data, int left, int center, int right) {
  
 
 }
+```
 
 **8、基数排序**
 
@@ -848,6 +862,7 @@ public void merge(int[] data, int left, int center, int right) {
 <img src="../images/wps83E7.tmp.jpg" alt="img" style="zoom:38%;" /> 
 
 （3）用java实现
+```
 
 import java.util.ArrayList;  
 
@@ -974,7 +989,7 @@ public  void sort(int[] array){
 
 }
 
- 
+ ```
 
 ## **5.3Arrays工具类**
 
