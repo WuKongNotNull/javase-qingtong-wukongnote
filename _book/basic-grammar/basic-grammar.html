@@ -1,0 +1,2383 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>基础语法 · 悟空非空也 - JavaSE 入门 - 青铜篇</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="悟空非空也">
+        
+        
+    
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex-toc/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-insert-logo-link-website/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-pageview-count/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-flexible-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-auto-scroll-table/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-accordion/accordion.css">
+                
+            
+                
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-sectionx/sectionx.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+
+    
+
+        
+    
+    
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../flow-control/flow-control.html" />
+    
+    
+    <link rel="prev" href="../java-introduction/first-program.html" />
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"WuKongNotNull","repo":"javase-qingtong-wukongnote","type":"star","size":"small"}]};
+    </script>
+
+    
+        <link rel="shortcut icon" href="asset/wukong-favicon.ico" type="image/x-icon">
+    
+    
+    
+    
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/apple-touch-icon-precomposed-152.png">
+    
+    
+        
+    
+    
+        
+    
+
+    
+    <link rel="stylesheet" href="../gitbook/gitbook-plugin-chart/c3/c3.min.css">
+    <script src="../gitbook/gitbook-plugin-chart/c3/d3.min.js"></script>
+    <script src="../gitbook/gitbook-plugin-chart/c3/c3.min.js"></script>
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://github.com/WuKongNotNull/awesome-free-vpn" target="_blank" class="custom-link">科学上网</a>
+        </li>
+    
+        
+        <li>
+            <a href="https://www.bilibili.com/read/cv11463068" target="_blank" class="custom-link">JetBrains 全家桶</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Java 青铜篇-首页
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../computer-overview/computer-overview.html">
+            
+                <a href="../computer-overview/computer-overview.html">
+            
+                    
+                    认识计算机
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../computer-overview/shortcuts-keyboard.html">
+            
+                <a href="../computer-overview/shortcuts-keyboard.html">
+            
+                    
+                    shortcuts-keyboard.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../computer-overview/dos-command.html">
+            
+                <a href="../computer-overview/dos-command.html">
+            
+                    
+                    dos-command.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../java-introduction/java-introduction.html">
+            
+                <a href="../java-introduction/java-introduction.html">
+            
+                    
+                    认识 Java
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="../java-introduction/java-history.html">
+            
+                <a href="../java-introduction/java-history.html">
+            
+                    
+                    java-history.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2" data-path="../java-introduction/dev-env.html">
+            
+                <a href="../java-introduction/dev-env.html">
+            
+                    
+                    dev-env.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3" data-path="../java-introduction/notepad-dev.html">
+            
+                <a href="../java-introduction/notepad-dev.html">
+            
+                    
+                    notepad-dev.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4" data-path="../java-introduction/jvm.html">
+            
+                <a href="../java-introduction/jvm.html">
+            
+                    
+                    jvm.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.5" data-path="../java-introduction/ide-dev.html">
+            
+                <a href="../java-introduction/ide-dev.html">
+            
+                    
+                    ide-dev.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.6" data-path="../java-introduction/first-program.html">
+            
+                <a href="../java-introduction/first-program.html">
+            
+                    
+                    first-program.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter active" data-level="4.1" data-path="basic-grammar.html">
+            
+                <a href="basic-grammar.html">
+            
+                    
+                    基础语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../flow-control/flow-control.html">
+            
+                <a href="../flow-control/flow-control.html">
+            
+                    
+                    流程控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../array/array.html">
+            
+                <a href="../array/array.html">
+            
+                    
+                    数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="../object-oriented/object-oriented.html">
+            
+                <a href="../object-oriented/object-oriented.html">
+            
+                    
+                    面向对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" data-path="../packaging/packaging.html">
+            
+                <a href="../packaging/packaging.html">
+            
+                    
+                    封装
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="9.1" data-path="../inherit/inherit.html">
+            
+                <a href="../inherit/inherit.html">
+            
+                    
+                    继承
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="10.1" data-path="../abstract-class/abstract-class.html">
+            
+                <a href="../abstract-class/abstract-class.html">
+            
+                    
+                    抽象类
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="11.1" data-path="../inner-class/inner-class.html">
+            
+                <a href="../inner-class/inner-class.html">
+            
+                    
+                    内部类
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="12.1" data-path="../polymorphism/polymorphism.html">
+            
+                <a href="../polymorphism/polymorphism.html">
+            
+                    
+                    多态
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="13.1" data-path="../object-class/object-class.html">
+            
+                <a href="../object-class/object-class.html">
+            
+                    
+                    Object 类
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="14.1" data-path="../oop-idea/oop-idea.html">
+            
+                <a href="../oop-idea/oop-idea.html">
+            
+                    
+                    面向对象编程思想
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="15.1" data-path="../interface/interface.html">
+            
+                <a href="../interface/interface.html">
+            
+                    
+                    接口
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="16.1" data-path="../exception/exceptions.html">
+            
+                <a href="../exception/exceptions.html">
+            
+                    
+                    异常
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="17.1" data-path="../collection/collection.html">
+            
+                <a href="../collection/collection.html">
+            
+                    
+                    集合
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="18.1" data-path="../genericity/genericity.html">
+            
+                <a href="../genericity/genericity.html">
+            
+                    
+                    泛型
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="19.1" data-path="../utility-class/utility-class.html">
+            
+                <a href="../utility-class/utility-class.html">
+            
+                    
+                    实用类
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="20.1" data-path="../stream/stream.html">
+            
+                <a href="../stream/stream.html">
+            
+                    
+                    流处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="21.1" data-path="../multithreading/multithreading.html">
+            
+                <a href="../multithreading/multithreading.html">
+            
+                    
+                    多线程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="22.1" data-path="../network-programming/network-programming.html">
+            
+                <a href="../network-programming/network-programming.html">
+            
+                    
+                    网络编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="23.1" data-path="../reflect/reflect.html">
+            
+                <a href="../reflect/reflect.html">
+            
+                    
+                    反射
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="24.1" data-path="../xml/xml.html">
+            
+                <a href="../xml/xml.html">
+            
+                    
+                    XML
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="25.1" data-path="../design-mode/design-mode.html">
+            
+                <a href="../design-mode/design-mode.html">
+            
+                    
+                    设计模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+
+    
+    <li>
+        
+        
+        
+            
+        
+        
+            <a href="http://www.beian.miit.gov.cn/" target="blank" class="gitbook-link">
+                苏ICP备2021034291号
+            </a>
+        
+    </li>
+    
+</ul>
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >基础语法</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon fa fa-hand-o-right"></span><a href="#3-&#x57FA;&#x7840;&#x8BED;&#x6CD5;"><b> </b>3 &#x57FA;&#x7840;&#x8BED;&#x6CD5;</a></li><ul><li><span class="title-icon fa fa-hand-o-right"></span><a href="#31java&#x5185;&#x5B58;&#x5212;&#x5206;"><b>1. </b>3.1Java&#x5185;&#x5B58;&#x5212;&#x5206;</a></li><li><span class="title-icon fa fa-hand-o-right"></span><a href="#31&#x6807;&#x8BC6;&#x7B26;"><b>2. </b>3.1&#x6807;&#x8BC6;&#x7B26;</a></li><li><span class="title-icon fa fa-hand-o-right"></span><a href="#32&#x6CE8;&#x91CA;"><b>3. </b>3.2&#x6CE8;&#x91CA;</a></li><li><span class="title-icon fa fa-hand-o-right"></span><a href="#33&#x5E38;&#x91CF;"><b>4. </b>3.3&#x5E38;&#x91CF;</a></li><li><span class="title-icon fa fa-hand-o-right"></span><a href="#34&#x53D8;&#x91CF;"><b>5. </b>3.4&#x53D8;&#x91CF;</a></li><ul><li><span class="title-icon fa fa-hand-o-right"></span><a href="#341&#x53D8;&#x91CF;&#x7684;&#x58F0;&#x660E;&#x548C;&#x4F7F;&#x7528;"><b>5.1. </b>3.4.1&#x53D8;&#x91CF;&#x7684;&#x58F0;&#x660E;&#x548C;&#x4F7F;&#x7528;</a></li></ul><li><span class="title-icon fa fa-hand-o-right"></span><a href="#35&#x6570;&#x636E;&#x7C7B;&#x578B;"><b>6. </b>3.5&#x6570;&#x636E;&#x7C7B;&#x578B;</a></li><ul><li><span class="title-icon fa fa-hand-o-right"></span><a href="#351&#x57FA;&#x672C;&#x6570;&#x636E;&#x7C7B;&#x578B;"><b>6.1. </b>3.5.1&#x57FA;&#x672C;&#x6570;&#x636E;&#x7C7B;&#x578B;</a></li><li><span class="title-icon fa fa-hand-o-right"></span><a href="#352&#x5F15;&#x7528;&#x6570;&#x636E;&#x7C7B;&#x578B;"><b>6.2. </b>3.5.2&#x5F15;&#x7528;&#x6570;&#x636E;&#x7C7B;&#x578B;</a></li></ul><li><span class="title-icon fa fa-hand-o-right"></span><a href="#36&#x6570;&#x636E;&#x7C7B;&#x578B;&#x8F6C;&#x6362;"><b>7. </b>3.6&#x6570;&#x636E;&#x7C7B;&#x578B;&#x8F6C;&#x6362;</a></li><li><span class="title-icon fa fa-hand-o-right"></span><a href="#37scanner&#x952E;&#x76D8;&#x5F55;&#x5165;"><b>8. </b>3.7Scanner(&#x952E;&#x76D8;&#x5F55;&#x5165;)</a></li><ul><li><span class="title-icon fa fa-hand-o-right"></span><a href="#&#x7EC3;&#x4E60;"><b>8.1. </b>&#x7EC3;&#x4E60;</a></li></ul><li><span class="title-icon fa fa-hand-o-right"></span><a href="#38&#x8FD0;&#x7B97;&#x7B26;"><b>9. </b>3.8&#x8FD0;&#x7B97;&#x7B26;</a></li><ul><li><span class="title-icon fa fa-hand-o-right"></span><a href="#&#x8D4B;&#x503C;&#x8FD0;&#x7B97;&#x7B26;"><b>9.1. </b>&#x8D4B;&#x503C;&#x8FD0;&#x7B97;&#x7B26;</a></li><li><span class="title-icon fa fa-hand-o-right"></span><a href="#&#x7B97;&#x672F;&#x8FD0;&#x7B97;&#x7B26;"><b>9.2. </b>&#x7B97;&#x672F;&#x8FD0;&#x7B97;&#x7B26;</a></li><li><span class="title-icon fa fa-hand-o-right"></span><a href="#&#x5173;&#x7CFB;&#x8FD0;&#x7B97;&#x7B26;"><b>9.3. </b>&#x5173;&#x7CFB;&#x8FD0;&#x7B97;&#x7B26;</a></li><li><span class="title-icon fa fa-hand-o-right"></span><a href="#&#x903B;&#x8F91;&#x8FD0;&#x7B97;&#x7B26;"><b>9.4. </b>&#x903B;&#x8F91;&#x8FD0;&#x7B97;&#x7B26;</a></li><li><span class="title-icon fa fa-hand-o-right"></span><a href="#&#x4F4D;&#x8FD0;&#x7B97;&#x7B26;"><b>9.5. </b>&#x4F4D;&#x8FD0;&#x7B97;&#x7B26;</a></li><li><span class="title-icon fa fa-hand-o-right"></span><a href="#&#x4E09;&#x76EE;&#x8FD0;&#x7B97;&#x7B26;"><b>9.6. </b>&#x4E09;&#x76EE;&#x8FD0;&#x7B97;&#x7B26;</a></li></ul></ul></ul></div><a href="#3-&#x57FA;&#x7840;&#x8BED;&#x6CD5;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="3-&#x57FA;&#x7840;&#x8BED;&#x6CD5;"><a name="3-&#x57FA;&#x7840;&#x8BED;&#x6CD5;" class="anchor-navigation-ex-anchor" href="#3-&#x57FA;&#x7840;&#x8BED;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a> 3 &#x57FA;&#x7840;&#x8BED;&#x6CD5;</h1>
+<h2 id="31java&#x5185;&#x5B58;&#x5212;&#x5206;"><a name="31java&#x5185;&#x5B58;&#x5212;&#x5206;" class="anchor-navigation-ex-anchor" href="#31java&#x5185;&#x5B58;&#x5212;&#x5206;"><i class="fa fa-link" aria-hidden="true"></i></a>1. 3.1Java&#x5185;&#x5B58;&#x5212;&#x5206;</h2>
+<p><strong>1.</strong> java&#x5B9A;&#x4E49;&#x4E86;8&#x4E2D;&#x57FA;&#x672C;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x548C;&#x5F15;&#x7528;&#x6570;&#x636E;&#x7C7B;&#x578B;&#xFF08;JDK&#x9884;&#x5B9A;&#x4E49;&#x7684;&#x5F15;&#x7528;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x548C;&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x5F15;&#x7528;&#x6570;&#x636E;&#x7C7B;&#x578B;&#xFF09;&#xFF0C;java&#x7A0B;&#x5E8F;&#x7684;&#x6267;&#x884C;&#x4F1A;&#x5C06;&#x5185;&#x5B58;&#x5212;&#x5206;&#x4E3A;&#x6808;&#x7A7A;&#x95F4;&#x548C;&#x5806;&#x7A7A;&#x95F4;</p>
+<p><strong>2.</strong> <strong>&#x6808;&#x7A7A;&#x95F4;</strong>:&#x81EA;&#x52A8;&#x5206;&#x914D;&#xFF0C;&#x4E0D;&#x9700;&#x8981;&#x7A0B;&#x5E8F;&#x5458;&#x53BB;&#x7533;&#x8BF7;</p>
+<p>1.&#x6808;&#x7A7A;&#x95F4;&#x5B58;&#x53D6;&#x6570;&#x636E;&#x7684;&#x6548;&#x7387;&#x9AD8;&#x3002; </p>
+<p>2.&#x6808;&#x4E2D;&#x7684;&#x6570;&#x636E;&#x6309;&#x201C;&#x5148;&#x8FDB;&#x540E;&#x51FA;&#x201D;&#x7684;&#x65B9;&#x5F0F;&#x7BA1;&#x7406;&#x3002; </p>
+<p>3.&#x6808;&#x7A7A;&#x95F4;&#x5B58;&#x50A8;&#x7A7A;&#x95F4;&#x8F83;&#x5C0F;&#xFF0C;&#x4E0D;&#x80FD;&#x5B58;&#x653E;&#x5927;&#x91CF;&#x7684;&#x6570;&#x636E;&#x3002;</p>
+<p>4.JVM&#x5C06;&#x57FA;&#x672C;&#x7C7B;&#x578B;&#x7684;&#x6570;&#x636E;&#x5B58;&#x653E;&#x5728;&#x6808;&#x7A7A;&#x95F4;&#x3002; </p>
+<p><strong>3.</strong> <strong>&#x5806;&#x7A7A;&#x95F4;</strong>&#xFF1A;&#x9700;&#x8981;&#x7A0B;&#x5E8F;&#x5458;&#x53BB;&#x7533;&#x8BF7;</p>
+<p>1&#x3001;&#x5806;&#x7A7A;&#x95F4;&#x5B58;&#x53D6;&#x6570;&#x636E;&#x7684;&#x6548;&#x7387;&#x6700;&#x4F4E;&#xFF1B;</p>
+<p>2&#x3001;&#x6570;&#x636E;&#x5B58;&#x653E;&#x7684;&#x4F4D;&#x7F6E;&#x968F;&#x673A;&#x5206;&#x914D;&#xFF1B;</p>
+<p>3&#x3001;&#x5806;&#x7A7A;&#x95F4;&#x5B58;&#x50A8;&#x6570;&#x636E;&#x7684;&#x7A7A;&#x95F4;&#x5927;&#xFF0C;&#x80FD;&#x5B58;&#x653E;&#x5927;&#x5BB9;&#x91CF;&#x7684;&#x6570;&#x636E;&#x3002;</p>
+<h2 id="31&#x6807;&#x8BC6;&#x7B26;"><a name="31&#x6807;&#x8BC6;&#x7B26;" class="anchor-navigation-ex-anchor" href="#31&#x6807;&#x8BC6;&#x7B26;"><i class="fa fa-link" aria-hidden="true"></i></a>2. 3.1&#x6807;&#x8BC6;&#x7B26;</h2>
+<p>&#x7531;&#x5B57;&#x6BCD;&#x3001;&#x6570;&#x5B57;&#x3001;&#x4E0B;&#x5212;&#x7EBF;&#xFF08;_&#xFF09;&#x6216;&#x8005;&#x7F8E;&#x5143;&#x7B26;&#x53F7;($)&#x7EC4;&#x6210;&#x3002;</p>
+<p>&#x9996;&#x5B57;&#x6BCD;&#x4EE5;&#x5B57;&#x6BCD;&#x3001;&#x4E0B;&#x5212;&#x7EBF;&#x6216;&#x8005;&#x7F8E;&#x5143;&#x7B26;&#x53F7;&#x5F00;&#x5934;&#xFF0C;&#x4E0D;&#x80FD;&#x4EE5;&#x6570;&#x5B57;&#x5F00;&#x5934;&#x3002;</p>
+<p>&#x4E0D;&#x80FD;&#x4E0E;&#x5173;&#x952E;&#x5B57;&#x3001;&#x5E03;&#x5C14;&#x503C;&#x548C;null&#x76F8;&#x540C;&#x3002;</p>
+<p>&#x533A;&#x5206;&#x5927;&#x5C0F;&#x5199;&#xFF0C;&#x6CA1;&#x6709;&#x957F;&#x5EA6;&#x9650;&#x5236;&#xFF0C;&#x575A;&#x6301;&#x89C1;&#x540D;&#x77E5;&#x4E49;&#x7684;&#x539F;&#x5219;&#x548C;&#x9A7C;&#x5CF0;&#x547D;&#x540D;&#x6CD5;&#x3002;</p>
+<pre><code class="lang-java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MakeNameDemo</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        <span class="hljs-comment">//&#x6B63;&#x786E;&#x505A;&#x6CD5;</span>
+        <span class="hljs-keyword">int</span> x = <span class="hljs-number">100</span>;
+
+        <span class="hljs-comment">//&#x4E0D;&#x80FD;&#x4EE5;&#x6570;&#x5B57;&#x5F00;&#x5934;</span>
+        <span class="hljs-comment">//int 1y = 100;</span>
+        <span class="hljs-keyword">int</span> y1 = <span class="hljs-number">100</span>;
+
+        <span class="hljs-comment">//&#x4E0D;&#x80FD;&#x662F;Java&#x4E2D;&#x7684;&#x5173;&#x952E;&#x5B57;</span>
+        <span class="hljs-comment">//int public = 100;</span>
+        <span class="hljs-keyword">int</span> Public = <span class="hljs-number">100</span>;
+    }
+}
+</code></pre>
+<h2 id="32&#x6CE8;&#x91CA;"><a name="32&#x6CE8;&#x91CA;" class="anchor-navigation-ex-anchor" href="#32&#x6CE8;&#x91CA;"><i class="fa fa-link" aria-hidden="true"></i></a>3. 3.2&#x6CE8;&#x91CA;</h2>
+<p>&#x5355;&#x884C;&#x6CE8;&#x91CA;</p>
+<pre><code class="lang-java"><span class="hljs-comment">//&#x5355;&#x884C;&#x6CE8;&#x91CA;</span>
+</code></pre>
+<p>&#x591A;&#x884C;&#x6CE8;&#x91CA;</p>
+<pre><code class="lang-java"><span class="hljs-comment">/*
+*&#x591A;&#x884C;&#x6CE8;&#x91CA;
+*
+*/</span>
+</code></pre>
+<p>&#x6587;&#x6863;&#x6CE8;&#x91CA;</p>
+<pre><code class="lang-java"><span class="hljs-comment">/**
+*&#x6587;&#x6863;&#x6CE8;&#x91CA;
+*<span class="hljs-doctag">@author</span>
+*<span class="hljs-doctag">@parameter</span>
+*<span class="hljs-doctag">@return</span>
+*/</span>
+</code></pre>
+<h2 id="33&#x5E38;&#x91CF;"><a name="33&#x5E38;&#x91CF;" class="anchor-navigation-ex-anchor" href="#33&#x5E38;&#x91CF;"><i class="fa fa-link" aria-hidden="true"></i></a>4. 3.3&#x5E38;&#x91CF;</h2>
+<p>&#x5728;java&#x4E2D;&#x7684;&#x5E38;&#x91CF;&#x662F;&#x6307;&#x5728;&#x7A0B;&#x5E8F;&#x8FD0;&#x884C;&#x4E2D;&#x503C;&#x4E0D;&#x53D8;&#x7684;&#x91CF;&#x3002;</p>
+<p>&#x5206;&#x7C7B;&#x4E3E;&#x4F8B;&#xFF1A;</p>
+<p>&#x6574;&#x578B;&#x5E38;&#x91CF;      123</p>
+<p>&#x6D6E;&#x70B9;&#x578B;&#x5E38;&#x91CF; 1.2f   /1.2D</p>
+<p>&#x5E03;&#x5C14;&#x5E38;&#x91CF;     true /  false</p>
+<p>&#x5B57;&#x7B26;&#x5E38;&#x91CF;    &#x2018;a&#x2019;</p>
+<p>&#x5B57;&#x7B26;&#x4E32;&#x5E38;&#x91CF;  &quot;abc&quot;</p>
+<p>null&#x5E38;&#x91CF;     null</p>
+<p>&#x7B26;&#x53F7;&#x5E38;&#x91CF;  final double PI=3.14</p>
+<pre><code class="lang-java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ConstantDemo</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        <span class="hljs-comment">//&#x5B57;&#x7B26;&#x4E32;&#x5E38;&#x91CF;&#x7684;&#x8F93;&#x51FA;</span>
+        System.out.println(<span class="hljs-string">&quot;hello&quot;</span>);
+
+        <span class="hljs-comment">//&#x6574;&#x6570;&#x5E38;&#x91CF;&#x7684;&#x8F93;&#x51FA;</span>
+        System.out.println(<span class="hljs-number">100</span>);
+
+        <span class="hljs-comment">//&#x5C0F;&#x6570;&#x5E38;&#x91CF;&#x7684;&#x8F93;&#x51FA;</span>
+        System.out.println(<span class="hljs-number">100.10</span>);
+
+        <span class="hljs-comment">//&#x5B57;&#x7B26;&#x5E38;&#x91CF;&#x7684;&#x8F93;&#x51FA;</span>
+        System.out.println(<span class="hljs-string">&apos;a&apos;</span>);
+        System.out.println(<span class="hljs-string">&apos;A&apos;</span>);
+        System.out.println(<span class="hljs-string">&apos;0&apos;</span>);
+        <span class="hljs-comment">//&#x8FD9;&#x4E2A;&#x662F;&#x6709;&#x95EE;&#x9898;&#x7684;</span>
+        <span class="hljs-comment">//System.out.println(&apos;ab&apos;);</span>
+
+        <span class="hljs-comment">//&#x5E03;&#x5C14;&#x5E38;&#x91CF;&#x7684;&#x8F93;&#x51FA;</span>
+        System.out.println(<span class="hljs-keyword">true</span>);
+        System.out.println(<span class="hljs-keyword">false</span>);
+    }
+}
+</code></pre>
+<pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TestFinal</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        <span class="hljs-comment">//&#x8BA1;&#x7B97;&#x5706;&#x7684;&#x9762;&#x79EF;</span>
+        <span class="hljs-keyword">final</span> <span class="hljs-keyword">double</span> PI=<span class="hljs-number">3.14</span>;
+        <span class="hljs-keyword">int</span> r=<span class="hljs-number">2</span>;
+
+        <span class="hljs-comment">//PI=8;  </span>
+        <span class="hljs-keyword">double</span> area=PI*r*r;
+        System.out.println(<span class="hljs-string">&quot;&#x5706;&#x7684;&#x9762;&#x79EF;&#x4E3A;&#xFF1A;&quot;</span>+area);
+
+    }
+}
+</code></pre>
+<h2 id="34&#x53D8;&#x91CF;"><a name="34&#x53D8;&#x91CF;" class="anchor-navigation-ex-anchor" href="#34&#x53D8;&#x91CF;"><i class="fa fa-link" aria-hidden="true"></i></a>5. 3.4&#x53D8;&#x91CF;</h2>
+<p>&#x5728;java&#x4E2D;&#x7684;&#x53D8;&#x91CF;&#x662F;&#x6307;&#x5728;&#x7A0B;&#x5E8F;&#x8FD0;&#x884C;&#x4E2D;&#x503C;&#x53EF;&#x4EE5;&#x6539;&#x53D8;&#x7684;&#x91CF;&#xFF0C;&#x5728;&#x9AD8;&#x7EA7;&#x8BED;&#x8A00;&#x4E2D;&#x666E;&#x904D;&#x4F7F;&#x7528;&#x53D8;&#x91CF;&#x6765;&#x7BA1;&#x7406;&#x5185;&#x5B58;&#x4E2D;&#x7684;&#x6570;&#x636E;&#x3002;</p>
+<h3 id="341&#x53D8;&#x91CF;&#x7684;&#x58F0;&#x660E;&#x548C;&#x4F7F;&#x7528;"><a name="341&#x53D8;&#x91CF;&#x7684;&#x58F0;&#x660E;&#x548C;&#x4F7F;&#x7528;" class="anchor-navigation-ex-anchor" href="#341&#x53D8;&#x91CF;&#x7684;&#x58F0;&#x660E;&#x548C;&#x4F7F;&#x7528;"><i class="fa fa-link" aria-hidden="true"></i></a>5.1. 3.4.1&#x53D8;&#x91CF;&#x7684;&#x58F0;&#x660E;&#x548C;&#x4F7F;&#x7528;</h3>
+<p><strong>1.&#x53D8;&#x91CF;&#x548C;&#x5B57;&#x9762;&#x91CF;</strong></p>
+<p>&#x200B;    <strong>public</strong> <strong>static</strong> <strong>void</strong> main(String[] args) {</p>
+<p>&#x200B;        <strong>int</strong> i =100; </p>
+<p>&#x200B;    }</p>
+<p>&#x4EE3;&#x7801;&#x89E3;&#x6790;&#xFF1A;</p>
+<p>1&#xFF09; i&#xFF1A;&#x8868;&#x793A;&#x53D8;&#x91CF;&#xFF0C;&#x53EF;&#x53D8;&#x7684;&#x91CF;&#xFF1B;</p>
+<p>2&#xFF09; 100&#xFF1A;&#x5B57;&#x9762;&#x91CF;&#xFF0C;&#x53D8;&#x91CF;&#x4E2D;&#x5B58;&#x653E;&#x7684;&#x5177;&#x4F53;&#x6570;&#x636E;&#xFF1B;</p>
+<p><strong>2.&#x53D8;&#x91CF;&#x7684;&#x547D;&#x540D;</strong></p>
+<p>(1)&#x9996;&#x5B57;&#x6BCD;&#x662F;&#x82F1;&#x6587;&#x5B57;&#x6BCD;&#x3001;$&#x6216;&#x4E0B;&#x5212;&#x7EBF;&#xFF0C;&#x540E;&#x9762;&#x7531;&#x5B57;&#x6BCD;&#x3001;&#x6570;&#x5B57;&#x3001; $&#x3001;&#x4E0B;&#x5212;&#x7EBF;&#x7EC4;&#x6210;&#xFF1B;    </p>
+<p>(2)&#x53D8;&#x91CF;&#x7684;&#x547D;&#x540D;&#x9075;&#x5FAA;&#x89C1;&#x540D;&#x77E5;&#x4E49;&#x7684;&#x539F;&#x5219;&#x3002;</p>
+<p>String name = &quot;jack&quot;;        //&#x59D3;&#x540D;</p>
+<p><strong>int</strong> age = 25;            //&#x5E74;&#x9F84;</p>
+<p>(3)Java&#x53D8;&#x91CF;&#x540D;&#x5EFA;&#x8BAE;&#x4E0D;&#x7528;&#x4E2D;&#x6587;&#x3002; (&#x4F7F;&#x7528;&#x4E2D;&#x6587;&#x5E76;&#x6CA1;&#x6709;&#x8BED;&#x6CD5;&#x9519;&#x8BEF;)</p>
+<p><img src="../images/wpsB8E5.tmp.jpg" alt="img">(4)&#x53D8;&#x91CF;&#x540D;&#x9996;&#x5B57;&#x6BCD;&#x5EFA;&#x8BAE;&#x4E0D;&#x7528;&#x5927;&#x5199;&#x5B57;&#x6BCD;&#x3002; </p>
+<p>(5)&#x7528;&#x9A7C;&#x5CF0;&#x547D;&#x540D;&#x6CD5;&#x547D;&#x540D;&#x591A;&#x4E2A;&#x5355;&#x8BCD;&#x7EC4;&#x6210;&#x7684;&#x53D8;&#x91CF;&#x540D;&#x3002; </p>
+<p>&#x200B;        String userName = &quot;admin&quot;;</p>
+<p>(6)&#x53D8;&#x91CF;&#x540D;&#x4E0D;&#x80FD;&#x4F7F;&#x7528;&#x5173;&#x952E;&#x5B57;</p>
+<p><img src="../images/wpsB8E6.tmp.jpg" alt="img"> </p>
+<p>PS&#xFF1A;<strong>&#x6709;&#x5173;&#x5173;&#x952E;&#x5B57;&#x503C;&#x5F97;&#x6211;&#x4EEC;&#x6CE8;&#x610F;&#x7684;&#x5730;&#x65B9;&#xFF1A;</strong> </p>
+<p>&#xFF08;1&#xFF09;<strong>true</strong>&#x3001;<strong>false</strong>&#x548C;<strong>null</strong>&#x4E3A;&#x5C0F;&#x5199;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x8C61;&#x5728;C++&#x8BED;&#x8A00;&#x4E2D;&#x90A3;&#x6837;&#x4E3A;&#x5927;&#x5199;&#x3002; </p>
+<p>&#xFF08;2&#xFF09;&#x65E0;<strong>sizeof</strong>&#x8FD0;&#x7B97;&#x7B26;&#xFF0C;&#x56E0;&#x4E3A;&#x6240;&#x6709;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x7684;&#x957F;&#x5EA6;&#x548C;&#x8868;&#x793A;&#x662F;&#x56FA;&#x5B9A;&#x7684;&#xFF0C;&#x4E0E;&#x5E73;&#x53F0;&#x65E0;&#x5173;&#xFF0C;&#x4E0D;&#x662F;&#x8C61;&#x5728;C&#x8BED;&#x8A00;&#x4E2D;&#x90A3;&#x6837;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x7684;&#x957F;&#x5EA6;&#x6839;&#x636E;&#x4E0D;&#x540C;&#x7684;&#x5E73;&#x53F0;&#x800C;&#x53D8;&#x5316;&#x3002;&#x8FD9;&#x6B63;&#x662F;Java&#x8BED;&#x8A00;&#x7684;&#x4E00;&#x5927;&#x7279;&#x70B9;&#x3002; </p>
+<p>&#xFF08;3&#xFF09;<strong>goto</strong>(&#x4FDD;&#x7559;&#x5B57;)&#x548C;<strong>const</strong>&#x4E0D;&#x662F;Java&#x7F16;&#x7A0B;&#x8BED;&#x8A00;&#x4E2D;&#x4F7F;&#x7528;&#x7684;&#x5173;&#x952E;&#x5B57;&#x3002; </p>
+<p><strong>3.&#x53D8;&#x91CF;&#x7684;&#x5B9A;&#x4E49;&#xFF08;&#x58F0;&#x660E;&#xFF09;&#xFF1A;</strong>    <strong>&#x7C7B;&#x578B;</strong>    <strong>&#x53D8;&#x91CF;&#x540D;1&#xFF0C;&#x53D8;&#x91CF;&#x540D;2**</strong>&#x2026;<strong>**&#x53D8;&#x91CF;&#x540D;n&#xFF1B;</strong></p>
+<p>&#x200B;    int a;  </p>
+<p>&#x200B;    int b;</p>
+<p>int    a,b,c;</p>
+<p>&#x200B;    <strong>4.&#x53D8;&#x91CF;&#x7684;&#x521D;&#x59CB;&#x5316;&#xFF08;&#x7B2C;&#x4E00;&#x6B21;&#x8D4B;&#x503C;&#xFF09;&#xFF1A;</strong>    <strong>&#x53D8;&#x91CF;&#x540D;=&#x5B57;&#x9762;&#x91CF;</strong></p>
+<p>&#x200B;        &#x5B57;&#x9762;&#x91CF;&#x53EF;&#x4EE5;&#x662F;&#x5177;&#x4F53;&#x6570;&#x503C;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x662F;&#x8FD4;&#x56DE;&#x6570;&#x7EC4;&#x7684;&#x8868;&#x8FBE;&#x5F0F;&#xFF1B;</p>
+<p>&#x200B;    <strong>5.&#x53D8;&#x91CF;&#x7684;&#x4F5C;&#x7528;&#x57DF;&#xFF1A;</strong></p>
+<p>1&#x3001; Java&#x7528;&#x4E00;&#x5BF9;&#x5927;&#x62EC;&#x53F7;&#x4F5C;&#x4E3A;&#x8BED;&#x53E5;&#x5757;&#x7684;&#x8303;&#x56F4;&#xFF0C;&#x79F0;&#x4E3A;&#x4F5C;&#x7528;&#x57DF;&#x3002;</p>
+<p>2&#x3001;&#x4F5C;&#x7528;&#x57DF;&#x4E2D;&#x7684;&#x53D8;&#x91CF;&#x4E0D;&#x80FD;&#x91CD;&#x590D;&#x5B9A;&#x4E49;&#x3002; </p>
+<p>3&#x3001;&#x79BB;&#x5F00;&#x4F5C;&#x7528;&#x57DF;&#xFF0C;&#x53D8;&#x91CF;&#x6240;&#x5206;&#x914D;&#x7684;&#x5185;&#x5B58;&#x7A7A;&#x95F4;&#x5C06;&#x88AB;JVM&#xFF08;GC&#x5783;&#x573E;&#x4F1A;&#x662F;&#x673A;&#x5236;&#xFF09;&#x56DE;&#x6536;&#x3002;</p>
+<h3 id=""> </h3>
+<pre><code class="lang-java">
+
+</code></pre>
+<p>&#x793A;&#x4F8B;1</p>
+<pre><code>/**
+*&#x58F0;&#x660E;&#x53D8;&#x91CF;&#xFF0C;&#x5728;&#x5185;&#x5B58;&#x4E2D;&#x5F00;&#x8F9F;&#x4E00;&#x4E2A;&#x5B58;&#x50A8;&#x7A7A;&#x95F4;
+*int number;
+*&#x8D4B;&#x503C;&#xFF0C;&#x5C06;&#x6570;&#x636E;&#x653E;&#x5165;&#x5230;&#x5B58;&#x50A8;&#x7A7A;&#x95F4;&#x5185;
+*number=1000;
+*&#x4E0A;&#x8FF0;&#x5408;&#x4E8C;&#x4E3A;&#x4E00;,&#x58F0;&#x660E;&#x53D8;&#x91CF;&#x5E76;&#x8D4B;&#x503C;
+*int number=1000;
+*/
+
+public class TestType {
+    public static void main(String[] args) {
+        double score = 98.5;
+        String name = &quot;&#x5F20;&#x4E09;&quot;;
+        char sex = &apos;&#x7537;&apos;;
+        System.out.println(&quot;&#x672C;&#x6B21;&#x8003;&#x8BD5;&#x6210;&#x7EE9;&#x6700;&#x9AD8;&#x5206;&#xFF1A; &quot; + score);
+        System.out.println(&quot;&#x6700;&#x9AD8;&#x5206;&#x5F97;&#x4E3B;&#xFF1A; &quot; + name);
+        System.out.println(&quot;&#x6027;&#x522B;&#xFF1A; &quot; + sex);
+    }
+}
+</code></pre><p>&#x793A;&#x4F8B;2</p>
+<p><img src="../../../teaching/zx&#x6559;&#x5B66;/&#x5907;&#x8BFE;/java/Java&#x57FA;&#x7840;/1-Java&#x57FA;&#x7840;.assets/image-20201118185807383.png" alt="image-20201118185807383"></p>
+<pre><code>//&#x5B9E;&#x73B0;&#x6570;&#x636E;&#x7684;&#x4EA4;&#x6362;
+public class TestChange {
+    public static void main(String[] args) {
+        int num1=5;
+        int num2=6;
+        System.out.println(&quot;&#x4EA4;&#x6362;&#x524D;&#xFF1A;&quot;);
+        System.out.println(&quot;num1:&quot;+num1);
+        System.out.println(&quot;num2:&quot;+num2);
+        int temp=num1;
+        num1=num2;
+        num2=temp;
+        System.out.println(&quot;&#x4EA4;&#x6362;&#x540E;&#xFF1A;&quot;);
+        System.out.println(&quot;num1:&quot;+num1);
+        System.out.println(&quot;num2:&quot;+num2);
+    }
+}
+</code></pre><h2 id="35&#x6570;&#x636E;&#x7C7B;&#x578B;"><a name="35&#x6570;&#x636E;&#x7C7B;&#x578B;" class="anchor-navigation-ex-anchor" href="#35&#x6570;&#x636E;&#x7C7B;&#x578B;"><i class="fa fa-link" aria-hidden="true"></i></a>6. 3.5&#x6570;&#x636E;&#x7C7B;&#x578B;</h2>
+<p>Java&#x662F;&#x4E00;&#x79CD;&#x5F3A;&#x7C7B;&#x578B;&#x7684;&#x8BED;&#x8A00;&#xFF0C;&#x9488;&#x5BF9;&#x6BCF;&#x4E00;&#x79CD;&#x6570;&#x636E;&#x90FD;&#x5B9A;&#x4E49;&#x4E86;&#x660E;&#x786E;&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x3002;</p>
+<p>&#x6570;&#x636E;&#x7C7B;&#x578B;&#x5206;&#x7C7B;&#xFF1A;</p>
+<p>&#x200B;        A:&#x57FA;&#x672C;&#x6570;&#x636E;&#x7C7B;&#x578B;</p>
+<p>&#x200B;        B:&#x5F15;&#x7528;&#x6570;&#x636E;&#x7C7B;&#x578B;(&#x7C7B;,&#x63A5;&#x53E3;,&#x6570;&#x503C;)</p>
+<p><img src="../images/1570609391817.png" alt="1570609391817" style="zoom: 33%;"></p>
+<h3 id="351&#x57FA;&#x672C;&#x6570;&#x636E;&#x7C7B;&#x578B;"><a name="351&#x57FA;&#x672C;&#x6570;&#x636E;&#x7C7B;&#x578B;" class="anchor-navigation-ex-anchor" href="#351&#x57FA;&#x672C;&#x6570;&#x636E;&#x7C7B;&#x578B;"><i class="fa fa-link" aria-hidden="true"></i></a>6.1. 3.5.1&#x57FA;&#x672C;&#x6570;&#x636E;&#x7C7B;&#x578B;</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">&#x6570;&#x636E;&#x7C7B;&#x578B;</th>
+<th style="text-align:center">&#x5927;&#x5C0F;</th>
+<th style="text-align:center">&#x53D6;&#x503C;&#x8303;&#x56F4;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">byte</td>
+<td style="text-align:center">1&#x5B57;&#x8282;8&#x4F4D;</td>
+<td style="text-align:center">-128  ~ +127</td>
+</tr>
+<tr>
+<td style="text-align:center">int</td>
+<td style="text-align:center">4&#x5B57;&#x8282;32&#x4F4D;</td>
+<td style="text-align:center">-2147483648&#xFF08;-231&#xFF09; ~ + 2147483647&#xFF08;231-1&#xFF09;</td>
+</tr>
+<tr>
+<td style="text-align:center">short</td>
+<td style="text-align:center">2&#x5B57;&#x8282;16&#x4F4D;</td>
+<td style="text-align:center">-32768 &#xFF08;-215&#xFF09; ~  + 32767 &#xFF08;+215-1&#xFF09;</td>
+</tr>
+<tr>
+<td style="text-align:center">long</td>
+<td style="text-align:center">8&#x5B57;&#x8282;64&#x4F4D;</td>
+<td style="text-align:center">-263  ~ + 263-1</td>
+</tr>
+<tr>
+<td style="text-align:center">float</td>
+<td style="text-align:center">4&#x5B57;&#x8282;32&#x4F4D;</td>
+<td style="text-align:center">1.4E-45 ~ 3.4E+38 , -1.4E-45 ~ -3.4E+38</td>
+</tr>
+<tr>
+<td style="text-align:center">double</td>
+<td style="text-align:center">8&#x5B57;&#x8282;64&#x4F4D;</td>
+<td style="text-align:center">4.9E-324 ~ 1.7E+308, -4.9E-324 ~ -1.7E+308</td>
+</tr>
+<tr>
+<td style="text-align:center">char</td>
+<td style="text-align:center">2&#x5B57;&#x8282;16&#x4F4D;</td>
+<td style="text-align:center">0~65535</td>
+</tr>
+<tr>
+<td style="text-align:center">boolean</td>
+<td style="text-align:center">1&#x5B57;&#x8282;8&#x4F4D;</td>
+<td style="text-align:center">true\false</td>
+</tr>
+</tbody>
+</table>
+<p><strong>&#x5B66;&#x4E60;&#x65B9;&#x6CD5;&#xFF1A;&#x53EF;&#x4EE5;&#x5C06;&#x57FA;&#x672C;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x7406;&#x89E3;&#x4E3A;&#x4E00;&#x4E2A;&#x4E2A;&#x5DF2;&#x7ECF;&#x6709;&#x56FA;&#x5B9A;&#x5927;&#x5C0F;&#x7684;&#x76D2;&#x5B50;&#xFF0C;&#x800C;JAVA&#x7A0B;&#x5E8F;&#x5728;&#x6267;&#x884C;&#x7684;&#x8FC7;&#x7A0B;&#x4E2D;&#x9700;&#x8981;&#x5C06;&#x7528;&#x7684;&#x6570;&#x636E;&#x5B58;&#x653E;&#x5728;&#x6307;&#x5B9A;&#x7684;&#x5927;&#x5C0F;&#x7684;&#x76D2;&#x5B50;&#x4E2D;&#x3002;</strong></p>
+<p><strong>1.&#x6574;&#x6570;&#x578B;</strong></p>
+<table>
+<thead>
+<tr>
+<th><strong>&#x7C7B;&#x578B;</strong></th>
+<th><strong>&#x5B58;&#x653E;&#x6570;&#x636E;&#x5927;&#x5C0F;</strong></th>
+<th><strong>&#x8BF4;&#x660E;</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&#x5B57;&#x8282;&#x578B;&#xFF08;<strong>byte</strong>&#xFF09;</td>
+<td>-2^7  ~  2^7-1</td>
+<td>&#x4F7F;&#x7528;&#x4E00;&#x4E2A;8&#x4F4D;&#x7684;&#x4E8C;&#x8FDB;&#x5236;&#x6765;&#x4FDD;&#x5B58;&#xFF0C;&#x5176;&#x4E2D;1&#x4F4D;&#x4E3A;&#x7B26;&#x53F7;&#x4F4D;&#x3002;</td>
+</tr>
+<tr>
+<td>&#x77ED;&#x6574;&#x578B;&#xFF08;<strong>short</strong>&#xFF09;</td>
+<td>-2^15  ~  2^15-1</td>
+<td>&#x4F7F;&#x7528;&#x4E00;&#x4E2A;16&#x4F4D;&#x7684;&#x4E8C;&#x8FDB;&#x5236;&#x6765;&#x4FDD;&#x5B58;&#xFF0C;&#x5176;&#x4E2D;1&#x4F4D;&#x4E3A;&#x7B26;&#x53F7;&#x4F4D;&#x3002;</td>
+</tr>
+<tr>
+<td>&#x6574;&#x578B;&#xFF08;<strong>int</strong>&#xFF09;</td>
+<td>-2^31  ~  2^31-1</td>
+<td>&#x4F7F;&#x7528;&#x4E00;&#x4E2A;32&#x4F4D;&#x7684;&#x4E8C;&#x8FDB;&#x5236;&#x6765;&#x4FDD;&#x5B58;&#xFF0C;&#x5176;&#x4E2D;1&#x4F4D;&#x4E3A;&#x7B26;&#x53F7;&#x4F4D;&#x3002;</td>
+</tr>
+<tr>
+<td>&#x957F;&#x6574;&#x578B;&#xFF08;<strong>long</strong>&#xFF09;</td>
+<td>-2^63  ~  2^63-1</td>
+<td>&#x4F7F;&#x7528;&#x4E00;&#x4E2A;64&#x4F4D;&#x7684;&#x4E8C;&#x8FDB;&#x5236;&#x6765;&#x4FDD;&#x5B58;&#xFF0C;&#x5176;&#x4E2D;1&#x4F4D;&#x4E3A;&#x7B26;&#x53F7;&#x4F4D;&#x3002;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>PS&#xFF1A;&#x5728;&#x7ED9;long&#x7C7B;&#x578B;&#x8D4B;&#x503C;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5982;&#x679C;&#x503C;&#x5927;&#x4E8E;2^31-1&#xFF0C;&#x90A3;&#x4E48;&#x9700;&#x8981;&#x5728;&#x5B57;&#x9762;&#x91CF;&#x540E;&#x9762;&#x52A0;&#x4E0A;L&#xFF0C;&#x4E0D;&#x533A;&#x5206;&#x5927;&#x5C0F;&#x5199;&#xFF0C;&#x56E0;&#x4E3A;java&#x4E2D;&#x9ED8;&#x8BA4;&#x5C06;&#x8F93;&#x51FA;&#x4F5C;&#x4E3A;int&#x7C7B;&#x578B;&#x6765;&#x8BA1;&#x7B97;&#x3002;</strong></p>
+<p>&#x200B;    <strong>2.&#x6D6E;&#x70B9;&#x578B;&#xFF1A;</strong></p>
+<p>1&#xFF09;&#x6D6E;&#x70B9;&#x7C7B;&#x578B;&#x7528;&#x4E8E;&#x8868;&#x793A;&#x5C0F;&#x6570;&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x3002; </p>
+<p>2&#xFF09;&#x6D6E;&#x70B9;&#x6570;&#x539F;&#x7406;:&#x4E5F;&#x5C31;&#x662F;&#x4E8C;&#x8FDB;&#x5236;&#x79D1;&#x5B66;&#x8BA1;&#x6570;&#x6CD5;&#x3002;</p>
+<p>3&#xFF09;Java&#x7684;&#x6D6E;&#x70B9;&#x7C7B;&#x578B;&#x6709;float&#x548C;double&#x4E24;&#x79CD;&#x3002;</p>
+<p>4&#xFF09;Java&#x9ED8;&#x8BA4;&#x6D6E;&#x70B9;&#x7C7B;&#x578B;&#x8BA1;&#x7B97;&#x7684;&#x7ED3;&#x679C;&#x662F;double&#x7C7B;&#x578B;&#xFF0C;&#x5B57;&#x9762;&#x91CF;&#x4E5F;&#x662F;double&#x7C7B;&#x578B;&#x3002;</p>
+<p>&#x200B;    2.1&#xFF09;<strong>float</strong>&#xFF1A;&#x5355;&#x7CBE;&#x5EA6;&#x6D6E;&#x70B9;&#x578B;</p>
+<p>1&#xFF09;float&#x7C7B;&#x578B;&#x5171;32&#x4F4D;&#xFF0C;1&#x4F4D;&#x4E3A;&#x7B26;&#x53F7;&#x4F4D;, &#x6307;&#x6570;8&#x4F4D;, &#x5C3E;&#x6570;23&#x4F4D;&#x3002;</p>
+<p>2&#xFF09;float&#x7684;&#x7CBE;&#x5EA6;&#x662F;23&#x4F4D;&#xFF08;&#x5373;&#x80FD;&#x7CBE;&#x786E;&#x8868;&#x8FBE;23&#x4F4D;&#x7684;&#x6570;&#xFF0C;&#x8D85;&#x8FC7;&#x5C31;&#x88AB;&#x622A;&#x53D6;&#x4E86;&#xFF09;&#x3002; </p>
+<p>3&#xFF09;&#x5C0F;&#x6570;&#x662F;&#x4EE5;&#x5C3E;&#x6570;&#x957F;&#x5EA6;&#x6765;&#x8868;&#x793A;&#x7CBE;&#x786E;&#x5EA6;&#x7684;&#xFF0C;&#x6BD4;&#x5982;pi=3.1415&#x7684;&#x7CBE;&#x5EA6;&#x662F;4&#x4F4D;&#x3002;</p>
+<p>4&#xFF09;float&#x5B58;&#x50A8;&#x6570;&#x636E;&#x7684;&#x8303;&#x56F4;&#x5927;&#x4E8E;int&#x7C7B;&#x578B;&#xFF0C;&#x4F46;&#x7CBE;&#x5EA6;&#x6BD4;int&#x8981;&#x5C0F;&#xFF0C;&#x56E0;&#x4E3A;int&#x7684;&#x7CBE;&#x5EA6;&#x662F;31&#x4F4D;&#x3002;</p>
+<p>5&#xFF09;&#x6D6E;&#x70B9;&#x578B;&#x7684;&#x53D6;&#x503C;&#x8303;&#x56F4;&#xFF1A;</p>
+<p>System.<strong>out</strong>.println(Float.<strong>MAX_VALUE</strong>);</p>
+<p>System.<strong>out</strong>.println(Float.<strong>MIN_VALUE</strong>);</p>
+<p>6&#xFF09;&#x5B9A;&#x4E49;&#x6D6E;&#x70B9;&#x578B;&#x5E76;&#x521D;&#x59CB;&#x5316;&#xFF0C;&#x5B57;&#x9762;&#x91CF;&#x540E;&#x9762;&#x9700;&#x8981;&#x52A0;&#x4E0A;F&#xFF0C;&#x4E0D;&#x533A;&#x5206;&#x5927;&#x5C0F;&#x5199;        </p>
+<p>&#x200B;        <strong>float</strong> f = 10.98f;        </p>
+<p>&#x200B;    2.2&#xFF09;<strong>double</strong>&#xFF1A;&#x53CC;&#x7CBE;&#x5EA6;&#x6D6E;&#x70B9;</p>
+<p>1&#xFF09;double&#x7C7B;&#x578B;&#xFF0C;1&#x4F4D;&#x7B26;&#x53F7;&#x4F4D;,11&#x4F4D;&#x6307;&#x6570;,52&#x4F4D;&#x5C3E;&#x6570;&#x3002;</p>
+<p>2&#xFF09;double&#x8303;&#x56F4;&#x8FDC;&#x8FDC;&#x5927;&#x4E8E;long&#xFF0C;&#x4F46;double&#x7CBE;&#x5EA6;&#x4E0D;&#x5982;long&#x3002;</p>
+<p>3&#xFF09;&#x5B9A;&#x4E49;double&#x7C7B;&#x578B;&#x5E76;&#x521D;&#x59CB;&#x5316;&#xFF0C;&#x5B57;&#x9762;&#x91CF;&#x9700;&#x8981;&#x52A0;&#x4E0A;D&#xFF0C;&#x4E0D;&#x533A;&#x5206;&#x5927;&#x5C0F;&#x5199;        </p>
+<p>&#x200B;        <strong>double</strong> d = 98.99d;</p>
+<p>&#x200B;    <strong>PS&#xFF1A;&#x6CE8;&#xFF1A;&#x6D6E;&#x70B9;&#x8FD0;&#x7B97;&#x5C31;&#x662F;&#x5B9E;&#x6570;&#x8FD0;&#x7B97;&#xFF0C;&#x7531;&#x4E8E;&#x8BA1;&#x7B97;&#x673A;&#x53EA;&#x80FD;&#x5B58;&#x50A8;&#x6574;&#x6570;&#xFF0C;&#x6240;&#x4EE5;&#x5B9E;&#x6570;&#x90FD;&#x662F;&#x7EA6;&#x6570;&#xFF0C;&#x8FD9;&#x6837;&#x6D6E;&#x70B9;&#x8FD0;&#x7B97;&#x662F;&#x5F88;&#x6162;&#x7684;&#x800C;&#x4E14;&#x4F1A;&#x6709;&#x8BEF;&#x5DEE;&#x3002;</strong></p>
+<p>&#x200B;    <strong>3.&#x5B57;&#x7B26;&#x578B;&#xFF1A;char</strong></p>
+<p>1&#xFF09;char&#x7C7B;&#x578B;&#x7684;&#x5B57;&#x9762;&#x91CF;&#x53EF;&#x4EE5;&#x662F;&#x4E00;&#x4E2A;&#x82F1;&#x6587;&#x5B57;&#x6BCD;&#x3001;&#x5B57;&#x7B26;&#x6216;&#x4E00;&#x4E2A;&#x6C49;&#x5B57;&#xFF0C;&#x5E76;&#x4E14;&#x7531;&#x5355;&#x5F15;&#x53F7;&#x5305;&#x62EC;&#x3002; </p>
+<p>2&#xFF09;Java&#x5E95;&#x5C42;&#x4F7F;&#x7528;&#x4E00;&#x4E2A;16&#x4F4D;&#x7684;&#x6574;&#x6570;&#x6765;&#x5904;&#x7406;&#x5B57;&#x7B26;&#x7C7B;&#x578B;,&#x8BE5;&#x6570;&#x503C;&#x662F;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x7684;unicode&#x7F16;&#x7801;&#x503C;&#x3002; </p>
+<p>&#x200B;        3&#xFF09;unicode</p>
+<p>a&#x3001;unicode&#x7F16;&#x7801;&#x662F;&#x5168;&#x7403;&#x8303;&#x56F4;&#x5185;&#x7684;&#x7F16;&#x7801;&#x65B9;&#x6CD5;&#x3002;</p>
+<p>b&#x3001;unicode&#x7F16;&#x7801;&#x7684;&#x82F1;&#x6587;&#x90E8;&#x5206;&#x4E0E;ASCII&#x7801;&#x517C;&#x5BB9;&#xFF08;ASCII&#x8868;&#x793A;&#x8303;&#x56F4;0~128&#xFF09;, &#x540C;&#x65F6;&#x82F1;&#x6587;&#x5B57;&#x7B26;&#x548C;&#x6570;&#x5B57;&#x662F;&#x8FDE;&#x7EED;&#x7F16;&#x7801;&#x7684;&#x3002; </p>
+<p>c&#x3001;Java&#x5728;&#x5904;&#x7406;char&#x7C7B;&#x578B;&#x7684;&#x6570;&#x636E;&#x65F6;&#xFF0C;&#x5728;&#x5E95;&#x5C42;&#x662F;&#x6309;unicode&#x7801;&#x6765;&#x5904;&#x7406;&#x7684;&#x3002;</p>
+<p>d&#x3001;&#x7F16;&#x7801;&#x662F;&#x4EC0;&#x4E48;&#xFF1F;&#x8BA1;&#x7B97;&#x673A;&#x786C;&#x4EF6;&#x7CFB;&#x7EDF;&#x53EA;&#x80FD;&#x7528;0&#x548C;1&#x8868;&#x793A;&#x6570;&#xFF0C;&#x6211;&#x4EEC;&#x4EBA;&#x4E3A;&#x5730;&#x505A;&#x4E86;&#x89C4;&#x5B9A;&#xFF0C;&#x67D0;&#x4E2A;&#x6570;&#x8FD8;&#x53EF;&#x4EE5;&#x8868;&#x793A;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x3002; </p>
+<p>&#x4F8B;&#x5982;&#xFF1A;65&#x4EE3;&#x8868;&#x7684;&#x5B57;&#x7B26;&#x662F;A</p>
+<p>&#x200B;        4)&#x8F6C;&#x4E49;&#x5B57;&#x7B26;&#xFF1A;&#x201D;\&#x201D;</p>
+<p>&#x8F6C;&#x4E49;&#x5B57;&#x7B26;&#x662F;&#x201D;\&#x201D;&#xFF0C;&#x901A;&#x8FC7;&#x8F6C;&#x4E49;&#x5B57;&#x7B26;&#xFF0C;&#x53EF;&#x8868;&#x793A;&#x4E00;&#x4E9B;&#x7279;&#x6B8A;&#x7684;&#x5B57;&#x7B26;&#x3002; &#x6216;&#x8005;&#x5C06;&#x672C;&#x8EAB;&#x5177;&#x6709;&#x7279;&#x6B8A;&#x542B;&#x4E49;&#x7684;&#x5B57;&#x7B26;&#x7684;&#x7279;&#x6B8A;&#x542B;&#x4E49;&#x53D6;&#x6D88;&#x3002;</p>
+<p>&#x4F8B;&#x5982;: </p>
+<pre><code>            &apos;\n&apos; &#x8868;&#x793A;&#x56DE;&#x8F66;
+
+&#x200B;            &apos;\t&apos; &#x8868;&#x793A;&#x5236;&#x8868;&#x4F4D;&#x5B57;&#x7B26;&#xFF0C;&#x4E00;&#x4E2A;&#x5236;&#x8868;&#x7B26;&#x8868;&#x793A;&#x5411;&#x53F3;&#x8DF3;8-10&#x4E2A;&#x5B57;&#x7B26;
+
+&#x200B;            &apos;\\&apos; &#x8868;&#x793A;\ 
+
+&#x200B;            &apos;\&apos; &apos; &#x8868;&#x793A;&#x5355;&#x5F15;&#x53F7;
+
+&#x200B;            &apos;\&quot;&apos; &#x8868;&#x793A;&#x53CC;&#x5F15;&#x53F7;
+</code></pre><p>&#x200B;    <strong>4.&#x5E03;&#x5C14;&#x578B;&#xFF1A;boolean</strong></p>
+<p>1&#x3001;&#x4EC0;&#x4E48;&#x662F;&#x5E03;&#x5C14;&#x7C7B;&#x578B; &#xFF1A;         boolean&#x7C7B;&#x578B;&#x7528;&#x6765;&#x8868;&#x793A;&#x80AF;&#x5B9A;&#x6216;&#x5426;&#x5B9A;&#x4E24;&#x79CD;&#x53EF;&#x80FD;&#x3002; </p>
+<p>2&#x3001;&#x4E3A;&#x4EC0;&#x4E48;&#x4F7F;&#x7528;&#x5E03;&#x5C14;&#x7C7B;&#x578B;&#xFF1F;        &#x5E03;&#x5C14;&#x7C7B;&#x578B;&#x5E38;&#x7528;&#x5728;&#x5206;&#x652F;&#x8BED;&#x53E5;&#x3001;&#x5FAA;&#x73AF;&#x8BED;&#x53E5;&#x4E2D;&#x3002;</p>
+<p>3&#x3001;boolean&#x7C7B;&#x578B;&#x7684;&#x503C;&#x6709;&#x4E24;&#x4E2A;&#xFF1A;     true:&#x8868;&#x793A;&#x80AF;&#x5B9A;&#x610F;&#x4E49;&#xFF1B;false:&#x8868;&#x793A;&#x5426;&#x5B9A;&#x610F;&#x4E49;&#xFF1B; </p>
+<p>4&#x3001;&#x5E03;&#x5C14;&#x53D8;&#x91CF;&#x7684;&#x5B9A;&#x4E49;            boolean isPass; </p>
+<p>5&#x3001;&#x5E03;&#x5C14;&#x53D8;&#x91CF;&#x7684;&#x521D;&#x59CB;&#x5316;            <strong>boolean</strong> isPass=true;       isPass=59&gt;=60;</p>
+<p>&#x6CE8;&#x610F;&#xFF1A;**</p>
+<p>&#x200B;            &#x6574;&#x6570;&#x9ED8;&#x8BA4;&#x662F;int&#x7C7B;&#x578B;</p>
+<p>&#x200B;            &#x6D6E;&#x70B9;&#x6570;&#x9ED8;&#x8BA4;&#x662F;double&#x7C7B;&#x578B;&#x3002;</p>
+<p>&#x200B;            &#x957F;&#x6574;&#x578B;&#x540E;&#x7F00;&#x7528;L&#x6216;&#x8005;l&#x6807;&#x8BB0;&#x3002;&#x5EFA;&#x8BAE;&#x4F7F;&#x7528;L&#x3002;</p>
+<p>&#x200B;            &#x5355;&#x7CBE;&#x5EA6;&#x6D6E;&#x70B9;&#x6570;&#x7528;F&#x6216;&#x8005;f&#x6807;&#x8BB0;&#x3002;&#x5EFA;&#x8BAE;&#x4F7F;&#x7528;F&#x3002;</p>
+<pre><code class="lang-java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DataTypeDemo</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        <span class="hljs-comment">//&#x5B9A;&#x4E49;&#x53D8;&#x91CF;&#x7684;&#x683C;&#x5F0F;&#xFF1A;</span>
+        <span class="hljs-comment">//&#x6570;&#x636E;&#x7C7B;&#x578B; &#x53D8;&#x91CF;&#x540D; = &#x521D;&#x59CB;&#x5316;&#x503C;;</span>
+
+        <span class="hljs-comment">//&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x5B57;&#x8282;&#x53D8;&#x91CF;</span>
+        <span class="hljs-keyword">byte</span> b = <span class="hljs-number">10</span>;
+        System.out.println(<span class="hljs-number">10</span>);
+        System.out.println(b);
+
+        <span class="hljs-comment">//&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x77ED;&#x6574;&#x578B;&#x53D8;&#x91CF;</span>
+        <span class="hljs-keyword">short</span> s = <span class="hljs-number">100</span>;
+        System.out.println(s);
+
+        <span class="hljs-comment">//&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x6574;&#x578B;&#x53D8;&#x91CF;</span>
+        <span class="hljs-keyword">int</span> i = <span class="hljs-number">1000</span>;
+        System.out.println(i);
+
+        <span class="hljs-comment">//&#x8D85;&#x8FC7;&#x4E86;int&#x7684;&#x8303;&#x56F4;</span>
+        <span class="hljs-comment">//int j = 1000000000000;</span>
+        <span class="hljs-keyword">long</span> j = <span class="hljs-number">1000000000000L</span>;
+        <span class="hljs-comment">//long j = 100L;</span>
+        System.out.println(j);
+
+        <span class="hljs-comment">//&#x5B9A;&#x4E49;&#x6D6E;&#x70B9;&#x6570;&#x636E;&#x53D8;&#x91CF;</span>
+        <span class="hljs-keyword">float</span> f = <span class="hljs-number">12.345F</span>;
+        System.out.println(f);
+
+        <span class="hljs-keyword">double</span> d = <span class="hljs-number">12.345</span>;
+        System.out.println(d);
+
+        <span class="hljs-comment">//&#x5B9A;&#x4E49;&#x5B57;&#x7B26;&#x53D8;&#x91CF;</span>
+        <span class="hljs-keyword">char</span> ch = <span class="hljs-string">&apos;a&apos;</span>;
+        System.out.println(ch);
+
+        <span class="hljs-comment">//&#x5B9A;&#x4E49;&#x5E03;&#x5C14;&#x53D8;&#x91CF;</span>
+        <span class="hljs-keyword">boolean</span> flag = <span class="hljs-keyword">true</span>;
+        System.out.println(flag);
+    }
+}
+</code></pre>
+<h3 id="352&#x5F15;&#x7528;&#x6570;&#x636E;&#x7C7B;&#x578B;"><a name="352&#x5F15;&#x7528;&#x6570;&#x636E;&#x7C7B;&#x578B;" class="anchor-navigation-ex-anchor" href="#352&#x5F15;&#x7528;&#x6570;&#x636E;&#x7C7B;&#x578B;"><i class="fa fa-link" aria-hidden="true"></i></a>6.2. 3.5.2&#x5F15;&#x7528;&#x6570;&#x636E;&#x7C7B;&#x578B;</h3>
+<p><strong>&#x4E00;&#x3001;</strong> <strong>&#x5B57;&#x7B26;&#x4E32;</strong></p>
+<p>java&#x4E2D;String&#x4E3A;&#x5E94;&#x7528;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x3002;&#x5B83;&#x662F;&#x4E00;&#x4E2A;&#x7279;&#x6B8A;&#x7684;&#x5F15;&#x7528;&#x6570;&#x636E;&#x7C7B;&#x578B;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x5B57;&#x9762;&#x503C;&#x7684;&#x65B9;&#x5F0F;&#x8FDB;&#x884C;&#x521D;&#x59CB;&#x5316;</p>
+<p>\1. &#x4F7F;&#x7528;new&#x5173;&#x952E;&#x5B57;&#x8FDB;&#x884C;&#x521D;&#x59CB;&#x5316;</p>
+<p>&#x200B;    String str = <strong>new</strong> String(&quot;java&quot;);</p>
+<p>&#x200B;    System.<strong>out</strong>.println(str);</p>
+<p>\2. &#x4F7F;&#x7528;&#x5B57;&#x9762;&#x91CF;&#x7684;&#x65B9;&#x5F0F;&#x521D;&#x59CB;&#x5316;</p>
+<p>&#x200B;    String str = &quot;java&quot;;</p>
+<p>&#x200B;    System.<strong>out</strong>.println(str);</p>
+<p>PS&#xFF1A;&#x5F53;String&#x7C7B;&#x578B;&#x4F7F;&#x7528;&#x5B57;&#x9762;&#x91CF;&#x7684;&#x65B9;&#x5F0F;&#x8FDB;&#x884C;&#x521D;&#x59CB;&#x5316;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5176;&#x53EF;&#x4EE5;&#x6309;&#x7167;&#x57FA;&#x672C;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x7684;&#x5904;&#x7406;&#x65B9;&#x5F0F;&#x6765;&#x5904;&#x7406;</p>
+<p>==&#x8FD0;&#x7B97;&#x7B26;&#xFF1A;&#x7528;&#x4E8E;&#x57FA;&#x672C;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x7684;&#x65F6;&#x5019;&#x662F;&#x6BD4;&#x8F83;&#x503C;&#x662F;&#x5426;&#x76F8;&#x540C;&#xFF0C;&#x7528;&#x4E8E;&#x5F15;&#x7528;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x662F;&#x6BD4;&#x8F83;&#x5176;&#x5185;&#x5B58;&#x5730;&#x5740;</p>
+<p>&#x200B;    String a = &quot;JAVA&quot;;</p>
+<p>&#x200B;    String b = &quot;JAVA&quot;;</p>
+<p>&#x200B;    System.<strong>out</strong>.println(a==b);//true</p>
+<p>&#x200B;    String a = <strong>new</strong> String(&quot;JAVA&quot;);</p>
+<p>&#x200B;    String b = <strong>new</strong> String(&quot;JAVA&quot;);</p>
+<p>&#x200B;    System.<strong>out</strong>.println(a==b);//false</p>
+<h2 id="36&#x6570;&#x636E;&#x7C7B;&#x578B;&#x8F6C;&#x6362;"><a name="36&#x6570;&#x636E;&#x7C7B;&#x578B;&#x8F6C;&#x6362;" class="anchor-navigation-ex-anchor" href="#36&#x6570;&#x636E;&#x7C7B;&#x578B;&#x8F6C;&#x6362;"><i class="fa fa-link" aria-hidden="true"></i></a>7. 3.6&#x6570;&#x636E;&#x7C7B;&#x578B;&#x8F6C;&#x6362;</h2>
+<p>&#x4E0D;&#x540C;&#x7684;&#x57FA;&#x672C;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x4E4B;&#x95F4;&#x8FDB;&#x884C;&#x8FD0;&#x7B97;&#x65F6;&#x9700;&#x8981;&#x8FDB;&#x884C;&#x7C7B;&#x578B;&#x8F6C;&#x6362;&#x3002;</p>
+<p><strong>1.&#x5C0F;&#x7C7B;&#x578B;&#x5411;&#x5927;&#x7C7B;&#x578B;&#x7684;&#x8F6C;&#x6362;</strong></p>
+<p>1) &#x5C0F;&#x7C7B;&#x578B;&#x5411;&#x5927;&#x7C7B;&#x578B;&#x7684;&#x8F6C;&#x6362;&#x4F1A;&#x81EA;&#x52A8;&#x5B8C;&#x6210;&#xFF0C;&#x5373;&#x4E0D;&#x9700;&#x8981;&#x7A0B;&#x5E8F;&#x5458;&#x7F16;&#x5199;&#x989D;&#x5916;&#x7684;&#x4EE3;&#x7801;&#xFF0C;&#x7531;JVM&#x8D1F;&#x8D23;&#x3002;&#x63D0;&#x793A;&#xFF1A;&#x81EA;&#x52A8;&#x7C7B;&#x578B;&#x8F6C;&#x6362;&#x4E5F;&#x53EB;&quot;&#x9690;&#x5F0F;&#x7C7B;&#x578B;&#x8F6C;&#x6362;&quot;&#x3002;</p>
+<p>2) &#x81EA;&#x52A8;&#x8F6C;&#x6362;&#x7684;&#x89C4;&#x5219;&#xFF1A;&#x7B26;&#x53F7;&#x4F4D;&#x4F1A;&#x81EA;&#x52A8;&#x6269;&#x5C55;, &#x8D1F;&#x6570;&#x8865;1, &#x6B63;&#x6570;&#x8865;0&#x3002;</p>
+<p>3) &#x81EA;&#x52A8;&#x7C7B;&#x578B;&#x8F6C;&#x6362;&#x5305;&#x542B;&#x4EE5;&#x4E0B;&#x60C5;&#x51B5;&#xFF1A;</p>
+<p>&#x200B;    (1)byte-&gt;short-&gt;int-&gt;long-&gt;float-&gt;double </p>
+<p>&#x200B;    (2)int&#x548C;char&#x7C7B;&#x578B;&#x7684;&#x6570;&#x636E;&#x5728;&#x67D0;&#x4E9B;&#x60C5;&#x51B5;&#x4E0B;&#x53EF;&#x4EE5;&#x81EA;&#x52A8;&#x76F8;&#x4E92;&#x8F6C;&#x6362;&#x3002;</p>
+<p>PS&#xFF1A;&#x5C0F;&#x7C7B;&#x578B;&#x5411;&#x5927;&#x7C7B;&#x578B;&#x8F6C;&#x6362;&#x4E00;&#x822C;&#x60C5;&#x51B5;&#x4E0B;&#x662F;&#x5B89;&#x5168;&#x7684;&#x3002;&#x5F53;&#x5C0F;&#x7C7B;&#x578B;&#x7684;&#x7CBE;&#x5EA6;&#x9AD8;&#x4E8E;&#x5927;&#x7C7B;&#x578B;&#x65F6;&#x8981;&#x6CE8;&#x610F;&#x7CBE;&#x5EA6;&#x4E22;&#x5931;&#x7684;&#x9690;&#x60A3;</p>
+<p><strong>int</strong> i = 0x10000001;</p>
+<p><strong>float</strong> f = i;</p>
+<p>System.<strong>out</strong>.println(i);// 268435457</p>
+<p>System.<strong>out</strong>.println(f);// 2.68435456E8</p>
+<p>&#x200B;    <strong>2.&#x5927;&#x7C7B;&#x578B;&#x5411;&#x5C0F;&#x7C7B;&#x578B;&#x7684;&#x8F6C;&#x6362;</strong></p>
+<p>1&#x3001;&#x5F3A;&#x8F6C;&#x7C7B;&#x578B;&#x8F6C;&#x6362;-&#x7B80;&#x79F0;&#x5F3A;&#x8F6C;</p>
+<p>2&#x3001;&#x5F3A;&#x5236;&#x7C7B;&#x578B;&#x8F6C;&#x6362;&#x65F6;&#xFF0C;&#x8981;&#x6CE8;&#x610F;&#x8FB9;&#x754C;&#x6570;&#x98CE;&#x9669;&#x95EE;&#x9898;</p>
+<p>&#x200B;        <strong>int</strong> i =129;</p>
+<p>&#x200B;        <strong>byte</strong> b = (<strong>byte</strong>) i;</p>
+<p>&#x200B;        System.<strong>out</strong>.println(i);    //129</p>
+<p>&#x200B;        System.<strong>out</strong>.println(b);    //-127</p>
+<p>&#x200B;    <strong>3.int&#x548C;char&#x7C7B;&#x578B;&#x4E4B;&#x95F4;&#x7684;&#x8F6C;&#x6362;</strong></p>
+<p>Java&#x5BF9;char&#x7C7B;&#x578B;&#x7684;&#x6570;&#x636E;&#x5728;&#x5E95;&#x5C42;&#x662F;&#x6309;int&#x7C7B;&#x578B;&#x6765;&#x5904;&#x7406;&#x7684;&#x3002; </p>
+<p>&#x200B;    <strong>int---&gt;char</strong></p>
+<p>&#x200B;        <strong>int</strong> i =97;</p>
+<p>&#x200B;        <strong>char</strong> c = (<strong>char</strong>) i;</p>
+<p>&#x200B;        System.<strong>out</strong>.println(i);//97</p>
+<p>&#x200B;        System.<strong>out</strong>.println(c);//a</p>
+<p>&#x200B;    </p>
+<p><strong>char--&gt;int</strong></p>
+<p>&#x200B;        <strong>char</strong> c = &apos;A&apos;;</p>
+<p>&#x200B;        <strong>int</strong> i = c;</p>
+<p>&#x200B;        System.<strong>out</strong>.println(c);//A</p>
+<p>&#x200B;        System.<strong>out</strong>.println(i);//65</p>
+<p>&#x200B;    &#x5B57;&#x7B26;&#x578B;&#x8FDB;&#x884C;&#x8BA1;&#x7B97;&#xFF1A;</p>
+<p>&#x200B;        <strong>char</strong> c = &apos;A&apos;;</p>
+<p>&#x200B;        System.<strong>out</strong>.println(c+1);//66</p>
+<p>1.&#x81EA;&#x52A8;&#x7C7B;&#x578B;&#x8F6C;&#x6362;</p>
+<pre><code class="lang-java"><span class="hljs-keyword">byte</span> b=<span class="hljs-number">2</span>;
+<span class="hljs-keyword">int</span> i=b;
+</code></pre>
+<p>2.&#x5F3A;&#x5236;&#x7C7B;&#x578B;&#x8F6C;&#x6362;</p>
+<pre><code class="lang-java"><span class="hljs-keyword">int</span> i=<span class="hljs-number">10</span>;
+<span class="hljs-keyword">byte</span> b=(<span class="hljs-keyword">byte</span>)i;
+<span class="hljs-keyword">short</span> s=(<span class="hljs-keyword">short</span>)i;
+</code></pre>
+<pre><code class="lang-java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DataTypeDemo4</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        <span class="hljs-keyword">byte</span> a = <span class="hljs-number">3</span>;
+        <span class="hljs-keyword">int</span> b = <span class="hljs-number">4</span>;
+
+        <span class="hljs-comment">//&#x8FD9;&#x4E2A;&#x80AF;&#x5B9A;&#x6CA1;&#x6709;&#x95EE;&#x9898;</span>
+        <span class="hljs-comment">//int c = a + b;</span>
+
+        <span class="hljs-comment">//byte c = 7;</span>
+        <span class="hljs-comment">//&#x8FD9;&#x4E2A;&#x662F;&#x6709;&#x95EE;&#x9898;&#x7684;</span>
+        <span class="hljs-comment">//byte c = a + b; </span>
+        <span class="hljs-comment">//&#x7528;&#x5F3A;&#x5236;&#x7C7B;&#x578B;&#x8F6C;&#x6362;&#x6539;&#x8FDB;</span>
+        <span class="hljs-keyword">byte</span> c = (<span class="hljs-keyword">byte</span>) (a + b);
+        System.out.println(c);
+    }
+}
+</code></pre>
+<pre><code class="lang-java">&#x601D;&#x8003;&#x9898;<span class="hljs-number">1</span>&#xFF1A;&#x8BF7;&#x95EE;&#x4E0B;&#x9762;&#x8FD9;&#x4E2A;&#x6709;&#x6CA1;&#x6709;&#x95EE;&#x9898;
+        <span class="hljs-keyword">double</span> d = <span class="hljs-number">12.345</span>;
+        <span class="hljs-keyword">float</span> f = d;
+
+    &#x601D;&#x8003;&#x9898;<span class="hljs-number">2</span>&#xFF1A;&#x770B;&#x770B;&#x4E0B;&#x9762;&#x4E24;&#x4E2A;&#x5B9A;&#x4E49;&#x6709;&#x6CA1;&#x6709;&#x533A;&#x522B;&#x5462;?
+        <span class="hljs-keyword">float</span> f1 = (<span class="hljs-keyword">float</span>)<span class="hljs-number">12.345</span>;
+        <span class="hljs-keyword">float</span> f2 = <span class="hljs-number">12.345f</span>;
+
+        f1&#x5176;&#x5B9E;&#x662F;&#x901A;&#x8FC7;&#x4E00;&#x4E2A;<span class="hljs-keyword">double</span>&#x7C7B;&#x578B;&#x8F6C;&#x6362;&#x8FC7;&#x6765;&#x7684;&#x3002;
+        &#x800C;f2&#x672C;&#x8EAB;&#x5C31;&#x662F;&#x4E00;&#x4E2A;<span class="hljs-keyword">float</span>&#x7C7B;&#x578B;&#x3002;
+*/
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DataTypeDemo5</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        <span class="hljs-comment">//&#x628A;double&#x8D4B;&#x503C;&#x7ED9;float&#xFF0C;&#x52A0;&#x4E86;&#x5F3A;&#x5236;&#x7C7B;&#x578B;&#x8F6C;&#x6362;</span>
+        <span class="hljs-keyword">double</span> d = <span class="hljs-number">12.345</span>;
+        <span class="hljs-keyword">float</span> f = (<span class="hljs-keyword">float</span>)d;
+
+        <span class="hljs-comment">//&#x770B;&#x770B;&#x4E0B;&#x9762;&#x4E24;&#x4E2A;&#x5B9A;&#x4E49;&#x6709;&#x6CA1;&#x6709;&#x533A;&#x522B;&#x5462;?</span>
+        <span class="hljs-keyword">float</span> f1 = (<span class="hljs-keyword">float</span>)<span class="hljs-number">12.345</span>;
+        <span class="hljs-keyword">float</span> f2 = <span class="hljs-number">12.345F</span>;
+    }
+}
+</code></pre>
+<p>&#x5B9E;&#x4F8B;&#x6F14;&#x793A;</p>
+<pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TypeChange</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        <span class="hljs-keyword">double</span> firstAvg = <span class="hljs-number">81.29</span>; <span class="hljs-comment">// &#x7B2C;&#x4E00;&#x6B21;&#x5E73;&#x5747;&#x5206;</span>
+        <span class="hljs-keyword">double</span> secondAvg; <span class="hljs-comment">// &#x7B2C;&#x4E8C;&#x6B21;&#x5E73;&#x5747;&#x5206;</span>
+        <span class="hljs-keyword">int</span> rise = <span class="hljs-number">2</span>;
+        secondAvg = firstAvg + rise;
+        System.out.println(<span class="hljs-string">&quot;&#x7B2C;&#x4E8C;&#x6B21;&#x5E73;&#x5747;&#x5206;&#x662F;&#xFF1A;&quot;</span> + secondAvg);
+
+    }
+}
+</code></pre>
+<h2 id="37scanner&#x952E;&#x76D8;&#x5F55;&#x5165;"><a name="37scanner&#x952E;&#x76D8;&#x5F55;&#x5165;" class="anchor-navigation-ex-anchor" href="#37scanner&#x952E;&#x76D8;&#x5F55;&#x5165;"><i class="fa fa-link" aria-hidden="true"></i></a>8. 3.7Scanner(&#x952E;&#x76D8;&#x5F55;&#x5165;)</h2>
+<p>&#x200B;    (1)&#x5B9E;&#x9645;&#x5F00;&#x53D1;&#x4E2D;&#xFF0C;&#x6570;&#x636E;&#x662F;&#x53D8;&#x5316;&#x7684;&#xFF0C;&#x4E3A;&#x4E86;&#x63D0;&#x9AD8;&#x7A0B;&#x5E8F;&#x7684;&#x7075;&#x6D3B;&#x6027;&#xFF0C;&#x6211;&#x4EEC;&#x52A0;&#x5165;&#x952E;&#x76D8;&#x5F55;&#x5165;&#x6570;&#x636E;&#x3002;</p>
+<p>&#x200B;    (2)&#x5982;&#x4F55;&#x5B9E;&#x73B0;&#x5462;?&#x76EE;&#x524D;&#x5C31;&#x8BB0;&#x4F4F;</p>
+<p>&#x200B;        A:&#x5BFC;&#x5305;</p>
+<p>&#x200B;            import java.util.Scanner;</p>
+<p>&#x200B;            &#x4F4D;&#x7F6E;&#xFF1A;&#x5728;class&#x7684;&#x4E0A;&#x8FB9;</p>
+<p>&#x200B;        B:&#x521B;&#x5EFA;&#x5BF9;&#x8C61;</p>
+<p>&#x200B;            Scanner sc = new Scanner(System.in);</p>
+<p>&#x200B;        C:&#x83B7;&#x53D6;&#x6570;&#x636E;</p>
+<p>&#x200B;            int x = sc.nextInt();</p>
+<p>&#x200B;    (3)&#x628A;&#x4E09;&#x5143;&#x8FD0;&#x7B97;&#x7B26;&#x7684;&#x6848;&#x4F8B;&#x52A0;&#x5165;&#x952E;&#x76D8;&#x5F55;&#x5165;&#x6539;&#x8FDB;&#x3002;</p>
+<pre><code class="lang-java"><span class="hljs-comment">/*
+    &#x4E3A;&#x4E86;&#x8BA9;&#x7A0B;&#x5E8F;&#x7684;&#x6570;&#x636E;&#x66F4;&#x7B26;&#x5408;&#x5F00;&#x53D1;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x6211;&#x4EEC;&#x5C31;&#x52A0;&#x5165;&#x4E86;&#x952E;&#x76D8;&#x5F55;&#x5165;&#x3002;
+    &#x8BA9;&#x7A0B;&#x5E8F;&#x66F4;&#x7075;&#x6D3B;&#x4E00;&#x4E0B;&#x3002;
+
+    &#x90A3;&#x4E48;&#xFF0C;&#x6211;&#x4EEC;&#x5982;&#x4F55;&#x5B9E;&#x73B0;&#x952E;&#x76D8;&#x6570;&#x636E;&#x7684;&#x5F55;&#x5165;&#x5462;?
+        A:&#x5BFC;&#x5305;
+            &#x683C;&#x5F0F;&#xFF1A;
+                import java.util.Scanner; 
+            &#x4F4D;&#x7F6E;&#xFF1A;
+                &#x5728;class&#x4E0A;&#x9762;&#x3002;
+        B:&#x521B;&#x5EFA;&#x952E;&#x76D8;&#x5F55;&#x5165;&#x5BF9;&#x8C61;
+            &#x683C;&#x5F0F;&#xFF1A;
+                Scanner sc = new Scanner(System.in);
+        C:&#x901A;&#x8FC7;&#x5BF9;&#x8C61;&#x83B7;&#x53D6;&#x6570;&#x636E;    
+            &#x683C;&#x5F0F;&#xFF1A;
+                int x = sc.nextInt();
+*/</span>
+<span class="hljs-keyword">import</span> java.util.Scanner;
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ScannerDemo</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        <span class="hljs-comment">//&#x521B;&#x5EFA;&#x952E;&#x76D8;&#x5F55;&#x5165;&#x6570;&#x636E;&#x5BF9;&#x8C61;</span>
+        Scanner sc = <span class="hljs-keyword">new</span> Scanner(System.in);
+
+        System.out.println(<span class="hljs-string">&quot;&#x8BF7;&#x4F60;&#x8F93;&#x5165;&#x4E00;&#x4E2A;&#x6570;&#x636E;&#xFF1A;&quot;</span>);
+        <span class="hljs-keyword">int</span> x = sc.nextInt();
+
+        System.out.println(<span class="hljs-string">&quot;&#x4F60;&#x8F93;&#x5165;&#x7684;&#x6570;&#x636E;&#x662F;&#xFF1A;&quot;</span>+x);
+    }
+}
+</code></pre>
+<pre><code class="lang-java"><span class="hljs-comment">/*
+    &#x952E;&#x76D8;&#x5F55;&#x5165;&#x7EC3;&#x4E60;&#xFF1A;
+        &#x952E;&#x76D8;&#x5F55;&#x5165;&#x4E24;&#x4E2A;&#x6570;&#x636E;&#xFF0C;&#x5E76;&#x5BF9;&#x8FD9;&#x4E24;&#x4E2A;&#x6570;&#x636E;&#x6C42;&#x548C;&#xFF0C;&#x8F93;&#x51FA;&#x5176;&#x7ED3;&#x679C;
+*/</span>
+<span class="hljs-keyword">import</span> java.util.Scanner;
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ScannerTest</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        <span class="hljs-comment">//&#x952E;&#x76D8;&#x5F55;&#x5165;&#x4E24;&#x4E2A;&#x6570;&#x636E;&#xFF0C;&#x5E76;&#x5BF9;&#x8FD9;&#x4E24;&#x4E2A;&#x6570;&#x636E;&#x6C42;&#x548C;&#xFF0C;&#x8F93;&#x51FA;&#x5176;&#x7ED3;&#x679C;</span>
+        <span class="hljs-comment">//&#x521B;&#x5EFA;&#x952E;&#x76D8;&#x5F55;&#x5165;&#x5BF9;&#x8C61;</span>
+        Scanner sc = <span class="hljs-keyword">new</span> Scanner(System.in);
+
+        System.out.println(<span class="hljs-string">&quot;&#x8BF7;&#x8F93;&#x5165;&#x7B2C;&#x4E00;&#x4E2A;&#x6570;&#x636E;&#xFF1A;&quot;</span>);
+        <span class="hljs-keyword">int</span> x = sc.nextInt();
+
+        System.out.println(<span class="hljs-string">&quot;&#x8BF7;&#x8F93;&#x5165;&#x7B2C;&#x4E8C;&#x4E2A;&#x6570;&#x636E;&#xFF1A;&quot;</span>);
+        <span class="hljs-keyword">int</span> y = sc.nextInt();
+
+        <span class="hljs-comment">//&#x628A;&#x952E;&#x76D8;&#x5F55;&#x5165;&#x7684;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x76F8;&#x52A0;&#x5373;&#x53EF;</span>
+        <span class="hljs-keyword">int</span> sum = (x + y);
+        System.out.println(<span class="hljs-string">&quot;sum:&quot;</span>+sum);
+    }
+}
+</code></pre>
+<h3 id="&#x7EC3;&#x4E60;"><a name="&#x7EC3;&#x4E60;" class="anchor-navigation-ex-anchor" href="#&#x7EC3;&#x4E60;"><i class="fa fa-link" aria-hidden="true"></i></a>8.1. &#x7EC3;&#x4E60;</h3>
+<pre><code class="lang-java"><span class="hljs-comment">/*
+    &#x952E;&#x76D8;&#x5F55;&#x5165;&#x7EC3;&#x4E60;&#xFF1A;
+        &#x952E;&#x76D8;&#x5F55;&#x5165;&#x4E24;&#x4E2A;&#x6570;&#x636E;&#xFF0C;&#x5E76;&#x5BF9;&#x8FD9;&#x4E24;&#x4E2A;&#x6570;&#x636E;&#x6C42;&#x548C;&#xFF0C;&#x8F93;&#x51FA;&#x5176;&#x7ED3;&#x679C;
+*/</span>
+<span class="hljs-keyword">import</span> java.util.Scanner;
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ScannerTest</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        <span class="hljs-comment">//&#x952E;&#x76D8;&#x5F55;&#x5165;&#x4E24;&#x4E2A;&#x6570;&#x636E;&#xFF0C;&#x5E76;&#x5BF9;&#x8FD9;&#x4E24;&#x4E2A;&#x6570;&#x636E;&#x6C42;&#x548C;&#xFF0C;&#x8F93;&#x51FA;&#x5176;&#x7ED3;&#x679C;</span>
+        <span class="hljs-comment">//&#x521B;&#x5EFA;&#x952E;&#x76D8;&#x5F55;&#x5165;&#x5BF9;&#x8C61;</span>
+        Scanner sc = <span class="hljs-keyword">new</span> Scanner(System.in);
+
+        System.out.println(<span class="hljs-string">&quot;&#x8BF7;&#x8F93;&#x5165;&#x7B2C;&#x4E00;&#x4E2A;&#x6570;&#x636E;&#xFF1A;&quot;</span>);
+        <span class="hljs-keyword">int</span> x = sc.nextInt();
+
+        System.out.println(<span class="hljs-string">&quot;&#x8BF7;&#x8F93;&#x5165;&#x7B2C;&#x4E8C;&#x4E2A;&#x6570;&#x636E;&#xFF1A;&quot;</span>);
+        <span class="hljs-keyword">int</span> y = sc.nextInt();
+
+        <span class="hljs-comment">//&#x628A;&#x952E;&#x76D8;&#x5F55;&#x5165;&#x7684;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x76F8;&#x52A0;&#x5373;&#x53EF;</span>
+        <span class="hljs-keyword">int</span> sum = (x + y);
+        System.out.println(<span class="hljs-string">&quot;sum:&quot;</span>+sum);
+    }
+}
+</code></pre>
+<pre><code class="lang-java"><span class="hljs-comment">/*
+    &#x7EC3;&#x4E60;&#xFF1A;
+        &#x952E;&#x76D8;&#x5F55;&#x5165;&#x4E09;&#x4E2A;&#x6570;&#x636E;&#xFF0C;&#x83B7;&#x53D6;&#x8FD9;&#x4E09;&#x4E2A;&#x6570;&#x636E;&#x4E2D;&#x7684;&#x6700;&#x5927;&#x503C;
+        &#x952E;&#x76D8;&#x5F55;&#x5165;&#x4E24;&#x4E2A;&#x6570;&#x636E;&#xFF0C;&#x6BD4;&#x8F83;&#x8FD9;&#x4E24;&#x4E2A;&#x6570;&#x636E;&#x662F;&#x5426;&#x76F8;&#x7B49;
+*/</span>
+<span class="hljs-keyword">import</span> java.util.Scanner;
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ScannerTest3</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        <span class="hljs-comment">//&#x952E;&#x76D8;&#x5F55;&#x5165;&#x4E09;&#x4E2A;&#x6570;&#x636E;&#xFF0C;&#x83B7;&#x53D6;&#x8FD9;&#x4E09;&#x4E2A;&#x6570;&#x636E;&#x4E2D;&#x7684;&#x6700;&#x5927;&#x503C;</span>
+
+        <span class="hljs-comment">//&#x521B;&#x5EFA;&#x952E;&#x76D8;&#x5F55;&#x5165;&#x5BF9;&#x8C61;</span>
+        Scanner sc = <span class="hljs-keyword">new</span> Scanner(System.in);
+
+        System.out.println(<span class="hljs-string">&quot;&#x8BF7;&#x8F93;&#x5165;&#x7B2C;&#x4E00;&#x4E2A;&#x6570;&#x636E;&#xFF1A;&quot;</span>);
+        <span class="hljs-keyword">int</span> a = sc.nextInt();
+
+        System.out.println(<span class="hljs-string">&quot;&#x8BF7;&#x8F93;&#x5165;&#x7B2C;&#x4E8C;&#x4E2A;&#x6570;&#x636E;&#xFF1A;&quot;</span>);
+        <span class="hljs-keyword">int</span> b = sc.nextInt();
+
+        System.out.println(<span class="hljs-string">&quot;&#x8BF7;&#x8F93;&#x5165;&#x7B2C;&#x4E09;&#x4E2A;&#x6570;&#x636E;&#xFF1A;&quot;</span>);
+        <span class="hljs-keyword">int</span> c = sc.nextInt();
+
+        <span class="hljs-comment">//&#x83B7;&#x53D6;&#x8FD9;&#x4E09;&#x4E2A;&#x6570;&#x636E;&#x4E2D;&#x7684;&#x6700;&#x5927;&#x503C;</span>
+        <span class="hljs-keyword">int</span> temp = ((a &gt; b)? a: b);
+        <span class="hljs-keyword">int</span> max = (temp &gt; c? temp : c);
+        System.out.println(<span class="hljs-string">&quot;max:&quot;</span>+max);
+        System.out.println(<span class="hljs-string">&quot;------------------&quot;</span>);
+
+        <span class="hljs-comment">//&#x952E;&#x76D8;&#x5F55;&#x5165;&#x4E24;&#x4E2A;&#x6570;&#x636E;</span>
+        System.out.println(<span class="hljs-string">&quot;&#x8BF7;&#x8F93;&#x5165;&#x7B2C;&#x4E00;&#x4E2A;&#x6570;&#x636E;&#xFF1A;&quot;</span>);
+        <span class="hljs-keyword">int</span> x = sc.nextInt();
+
+        System.out.println(<span class="hljs-string">&quot;&#x8BF7;&#x8F93;&#x5165;&#x7B2C;&#x4E8C;&#x4E2A;&#x6570;&#x636E;&#xFF1A;&quot;</span>);
+        <span class="hljs-keyword">int</span> y = sc.nextInt();
+
+        <span class="hljs-comment">//&#x6BD4;&#x8F83;&#x8FD9;&#x4E24;&#x4E2A;&#x6570;&#x636E;&#x662F;&#x5426;&#x76F8;&#x7B49;</span>
+        <span class="hljs-keyword">boolean</span> flag = (x == y);
+        System.out.println(<span class="hljs-string">&quot;flag:&quot;</span>+flag);
+    }
+}
+</code></pre>
+<p>Scanner&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#x63A7;&#x5236;&#x53F0;&#x8F93;&#x5165;&#x6570;&#x636E;&#x3002;</p>
+<pre><code class="lang-java"><span class="hljs-keyword">import</span> java.util.Scanner;
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TestScanner</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        Scanner input=<span class="hljs-keyword">new</span> Scanner(System.in);
+        System.out.print(<span class="hljs-string">&quot;&#x8BF7;&#x8F93;&#x5165;&#x60A8;&#x7684;&#x59D3;&#x540D;&#xFF1A;&quot;</span>);
+        String name=input.next();
+        System.out.print(<span class="hljs-string">&quot;&#x8BF7;&#x8F93;&#x5165;&#x60A8;&#x7684;&#x53F7;&#x7801;&#xFF1A;&quot;</span>);
+        <span class="hljs-keyword">int</span> num=input.nextInt();
+
+        System.out.println(name+<span class="hljs-string">&quot;&#x60A8;&#x597D;&#xFF01;&#x60A8;&#x7684;&#x7B49;&#x5F85;&#x53F7;&#x7801;&#x4E3A;&#xFF1A;&quot;</span>+num);
+
+    }
+}
+</code></pre>
+<p>&#x793A;&#x4F8B;</p>
+<pre><code>public class NumJudge {
+    /**
+     * &#x5224;&#x65AD;&#x4E00;&#x4E2A;&#x6570;&#x5B57;&#x662F;&#x5426;&#x4E3A;&#x5076;&#x6570;
+     */
+    public static void main(String[] args) {
+        Scanner input=new Scanner(System.in);
+        System.out.print(&quot;&#x8BF7;&#x8F93;&#x5165;&#x4E00;&#x4E2A;&#x6570;&#x5B57;&#xFF1A;&quot;);
+        int num=input.nextInt();
+        String result=(num%2==0)?&quot;&#x5076;&#x6570;&quot;:&quot;&#x5947;&#x6570;&quot;;
+        System.out.println(num+&quot;&#x662F;&quot;+result);
+    }
+
+}
+</code></pre><h2 id="38&#x8FD0;&#x7B97;&#x7B26;"><a name="38&#x8FD0;&#x7B97;&#x7B26;" class="anchor-navigation-ex-anchor" href="#38&#x8FD0;&#x7B97;&#x7B26;"><i class="fa fa-link" aria-hidden="true"></i></a>9. 3.8&#x8FD0;&#x7B97;&#x7B26;</h2>
+<h3 id="&#x8D4B;&#x503C;&#x8FD0;&#x7B97;&#x7B26;"><a name="&#x8D4B;&#x503C;&#x8FD0;&#x7B97;&#x7B26;" class="anchor-navigation-ex-anchor" href="#&#x8D4B;&#x503C;&#x8FD0;&#x7B97;&#x7B26;"><i class="fa fa-link" aria-hidden="true"></i></a>9.1. &#x8D4B;&#x503C;&#x8FD0;&#x7B97;&#x7B26;</h3>
+<p>A:=,+=,-=,*=,/=,%=&#x7B49;</p>
+<p>&#x200B;        B:=&#x53EB;&#x505A;&#x8D4B;&#x503C;&#x8FD0;&#x7B97;&#x7B26;&#xFF0C;&#x4E5F;&#x662F;&#x6700;&#x57FA;&#x672C;&#x7684;&#x8D4B;&#x503C;&#x8FD0;&#x7B97;&#x7B26;</p>
+<p>&#x200B;            int x = 10; &#x628A;10&#x8D4B;&#x503C;&#x7ED9;int&#x7C7B;&#x578B;&#x7684;&#x53D8;&#x91CF;x&#x3002;</p>
+<p>&#x200B;        C:&#x6269;&#x5C55;&#x7684;&#x8D4B;&#x503C;&#x8FD0;&#x7B97;&#x7B26;&#x7684;&#x7279;&#x70B9;</p>
+<p>&#x200B;            &#x9690;&#x542B;&#x4E86;&#x81EA;&#x52A8;&#x5F3A;&#x5236;&#x8F6C;&#x6362;&#x3002;</p>
+<p>&#x200B;            </p>
+<p>&#x200B;            &#x9762;&#x8BD5;&#x9898;&#xFF1A;</p>
+<p>&#x200B;                short s = 1;</p>
+<p>&#x200B;                s = s + 1;</p>
+<p>&#x200B;                </p>
+<p>&#x200B;                short s = 1;</p>
+<p>&#x200B;                s += 1;</p>
+<p>&#x200B;                &#x8BF7;&#x95EE;&#x4E0A;&#x9762;&#x7684;&#x4EE3;&#x7801;&#x54EA;&#x4E2A;&#x6709;&#x95EE;&#x9898;?</p>
+<pre><code class="lang-java"><span class="hljs-comment">/*
+    &#x8D4B;&#x503C;&#x8FD0;&#x7B97;&#x7B26;&#xFF1A;
+        &#x57FA;&#x672C;&#x7684;&#x8D4B;&#x503C;&#x8FD0;&#x7B97;&#x7B26;&#xFF1A;=
+            &#x628A;=&#x53F3;&#x8FB9;&#x7684;&#x6570;&#x636E;&#x8D4B;&#x503C;&#x7ED9;&#x5DE6;&#x8FB9;&#x3002;
+
+        &#x6269;&#x5C55;&#x7684;&#x8D4B;&#x503C;&#x8FD0;&#x7B97;&#x7B26;&#xFF1A;+=,-=,*=,/=,%=
+            += &#x628A;&#x5DE6;&#x8FB9;&#x548C;&#x53F3;&#x8FB9;&#x505A;&#x52A0;&#x6CD5;&#xFF0C;&#x7136;&#x540E;&#x8D4B;&#x503C;&#x7ED9;&#x5DE6;&#x8FB9;&#x3002;
+*/</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">OperatorDemo</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        <span class="hljs-comment">//&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x53D8;&#x91CF;</span>
+        <span class="hljs-keyword">int</span> x = <span class="hljs-number">10</span>;
+
+        <span class="hljs-comment">//&#x5176;&#x4ED6;&#x7528;&#x6CD5;</span>
+        <span class="hljs-keyword">int</span> a,b; 
+        a = b = <span class="hljs-number">10</span>;
+        System.out.println(a); 
+        System.out.println(b);
+        System.out.println(<span class="hljs-string">&quot;-----------&quot;</span>);
+
+        <span class="hljs-comment">//&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x53D8;&#x91CF;</span>
+        <span class="hljs-keyword">int</span> y = <span class="hljs-number">10</span>;
+
+        y += <span class="hljs-number">20</span>;
+
+        System.out.println(y);
+
+    }
+}
+</code></pre>
+<pre><code class="lang-java"><span class="hljs-comment">/*
+    &#x9762;&#x8BD5;&#x9898;&#xFF1A;
+        short s=1;s = s+1; 
+
+        short s=1;s+=1;
+        &#x4E0A;&#x9762;&#x4E24;&#x4E2A;&#x4EE3;&#x7801;&#x6709;&#x6CA1;&#x6709;&#x95EE;&#x9898;&#xFF0C;&#x5982;&#x679C;&#x6709;&#xFF0C;&#x90A3;&#x91CC;&#x6709;&#x95EE;&#x9898;&#x3002;
+
+        &#x4E3A;&#x4EC0;&#x4E48;&#x7B2C;&#x4E8C;&#x4E2A;&#x6728;&#x6709;&#x95EE;&#x9898;&#x5462;?
+            &#x6269;&#x5C55;&#x7684;&#x8D4B;&#x503C;&#x8FD0;&#x7B97;&#x7B26;&#x5176;&#x5B9E;&#x9690;&#x542B;&#x4E86;&#x4E00;&#x4E2A;&#x5F3A;&#x5236;&#x7C7B;&#x578B;&#x8F6C;&#x6362;&#x3002;
+
+            s += 1;
+            &#x4E0D;&#x662F;&#x7B49;&#x4EF7;&#x4E8E; s = s + 1;
+            &#x800C;&#x662F;&#x7B49;&#x4EF7;&#x4E8E; s = (s&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;)(s + 1);
+*/</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">OperatorTest</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        <span class="hljs-comment">//short s = 1;</span>
+        <span class="hljs-comment">//s = s + 1;</span>
+        <span class="hljs-comment">//System.out.println(s);</span>
+
+        <span class="hljs-keyword">short</span> s = <span class="hljs-number">1</span>;
+        s += <span class="hljs-number">1</span>; <span class="hljs-comment">//&#x597D;&#x50CF;&#x662F; s = s + 1;</span>
+        System.out.println(s);
+    }
+}
+</code></pre>
+<h3 id="&#x7B97;&#x672F;&#x8FD0;&#x7B97;&#x7B26;"><a name="&#x7B97;&#x672F;&#x8FD0;&#x7B97;&#x7B26;" class="anchor-navigation-ex-anchor" href="#&#x7B97;&#x672F;&#x8FD0;&#x7B97;&#x7B26;"><i class="fa fa-link" aria-hidden="true"></i></a>9.2. &#x7B97;&#x672F;&#x8FD0;&#x7B97;&#x7B26;</h3>
+<p>&#x200B;        A:&#x52A0;&#x53F7;&#xFF08;+&#xFF09;&#x3001; &#x51CF;&#x53F7;&#xFF08;-&#xFF09;&#x3001; &#x4E58;&#x53F7;&#xFF08;*&#xFF09;&#x3001; &#x9664;&#x53F7;&#xFF08;/&#xFF09; &#x3001;&#x53D6;&#x6A21;&#xFF08;%&#xFF09; &#x3001;&#x81EA;&#x589E;&#x8FD0;&#x7B97;&#x7B26;&#xFF08;++&#xFF09; &#x3001;&#x81EA;&#x51CF;&#x8FD0;&#x7B97;&#x7B26;&#xFF08;--&#xFF09;</p>
+<p>&#x200B;        B:+&#x7684;&#x7528;&#x6CD5;</p>
+<p>&#x200B;            a:&#x52A0;&#x6CD5;</p>
+<p>&#x200B;            b:&#x6B63;&#x53F7;</p>
+<p>&#x200B;            c:&#x5B57;&#x7B26;&#x4E32;&#x8FDE;&#x63A5;&#x7B26;</p>
+<p>&#x200B;        C:/&#x548C;%&#x7684;&#x533A;&#x522B;</p>
+<p>&#x200B;            &#x6570;&#x636E;&#x505A;&#x9664;&#x6CD5;&#x64CD;&#x4F5C;&#x7684;&#x65F6;&#x5019;&#xFF0C;/&#x53D6;&#x5F97;&#x662F;&#x5546;&#xFF0C;%&#x53D6;&#x5F97;&#x662F;&#x4F59;&#x6570;</p>
+<p>&#x200B;        D:++&#x548C;--&#x7684;&#x7528;&#x6CD5;</p>
+<p>&#x200B;            a:&#x4ED6;&#x4EEC;&#x7684;&#x4F5C;&#x7528;&#x662F;&#x81EA;&#x589E;&#x6216;&#x8005;&#x81EA;&#x51CF;</p>
+<p>&#x200B;            b:&#x4F7F;&#x7528;</p>
+<p>&#x200B;                **&#x5355;&#x72EC;&#x4F7F;&#x7528;</p>
+<p>&#x200B;                    &#x653E;&#x5728;&#x64CD;&#x4F5C;&#x6570;&#x636E;&#x7684;&#x524D;&#x9762;&#x548C;&#x540E;&#x9762;&#x6548;&#x679C;&#x4E00;&#x6837;&#x3002;</p>
+<p>&#x200B;                    a++&#x6216;&#x8005;++a&#x6548;&#x679C;&#x4E00;&#x6837;&#x3002;</p>
+<p>&#x200B;                **&#x53C2;&#x4E0E;&#x64CD;&#x4F5C;&#x4F7F;&#x7528;</p>
+<p>&#x200B;                    &#x653E;&#x5728;&#x64CD;&#x4F5C;&#x6570;&#x7684;&#x524D;&#x9762;&#xFF1A;&#x5148;&#x81EA;&#x589E;&#x6216;&#x8005;&#x81EA;&#x51CF;&#xFF0C;&#x518D;&#x53C2;&#x4E0E;&#x64CD;&#x4F5C;</p>
+<p>&#x200B;                        int a = 10;</p>
+<p>&#x200B;                        int b = ++a;</p>
+<p>&#x200B;                    &#x653E;&#x5728;&#x64CD;&#x4F5C;&#x6570;&#x7684;&#x540E;&#x9762;&#xFF1A;&#x5148;&#x53C2;&#x4E0E;&#x64CD;&#x4F5C;&#xFF0C;&#x518D;&#x81EA;&#x589E;&#x6216;&#x8005;&#x81EA;&#x51CF;</p>
+<p>&#x200B;                        int a = 10;</p>
+<p>&#x200B;                        int b = a++;</p>
+<pre><code class="lang-java"><span class="hljs-comment">/*
+    &#x8FD0;&#x7B97;&#x7B26;&#xFF1A;
+        &#x5C31;&#x662F;&#x5BF9;&#x5E38;&#x91CF;&#x548C;&#x53D8;&#x91CF;&#x8FDB;&#x884C;&#x64CD;&#x4F5C;&#x7684;&#x7B26;&#x53F7;&#x3002;
+
+    &#x5206;&#x7C7B;&#xFF1A;&#x7B97;&#x672F;&#x8FD0;&#x7B97;&#x7B26;&#xFF0C;&#x8D4B;&#x503C;&#x8FD0;&#x7B97;&#x7B26;&#xFF0C;&#x6BD4;&#x8F83;&#x8FD0;&#x7B97;&#x7B26;&#xFF0C;&#x903B;&#x8F91;&#x8FD0;&#x7B97;&#x7B26;&#xFF0C;&#x4F4D;&#x8FD0;&#x7B97;&#x7B26;&#xFF0C;&#x4E09;&#x76EE;&#x8FD0;&#x7B97;&#x7B26;
+
+    &#x7B97;&#x672F;&#x8FD0;&#x7B97;&#x7B26;&#xFF1A;
+        +,-,*,/,%,++,--
+
+    &#x6CE8;&#x610F;&#x4E8B;&#x9879;&#xFF1A;
+        A:&#x6574;&#x6570;&#x76F8;&#x9664;&#x53EA;&#x80FD;&#x5F97;&#x5230;&#x6574;&#x6570;&#x3002;&#x5982;&#x679C;&#x60F3;&#x5F97;&#x5230;&#x5C0F;&#x6570;&#xFF0C;&#x5FC5;&#x987B;&#x628A;&#x6570;&#x636E;&#x53D8;&#x5316;&#x4E3A;&#x6D6E;&#x70B9;&#x6570;&#x7C7B;&#x578B;
+        B:/&#x83B7;&#x53D6;&#x7684;&#x662F;&#x9664;&#x6CD5;&#x64CD;&#x4F5C;&#x7684;&#x5546;&#xFF0C;%&#x83B7;&#x53D6;&#x7684;&#x662F;&#x9664;&#x6CD5;&#x64CD;&#x4F5C;&#x7684;&#x4F59;&#x6570;
+*/</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">OperatorDemo</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        <span class="hljs-comment">//&#x5B9A;&#x4E49;&#x53D8;&#x91CF;</span>
+        <span class="hljs-keyword">int</span> x = <span class="hljs-number">3</span>;  <span class="hljs-comment">//&#x628A;3&#x8D4B;&#x503C;&#x7ED9;int&#x7C7B;&#x578B;&#x7684;&#x53D8;&#x91CF;x</span>
+        <span class="hljs-keyword">int</span> y = <span class="hljs-number">4</span>;
+
+        System.out.println(x+y);
+        System.out.println(x-y);
+        System.out.println(x*y);
+        System.out.println(x/y); <span class="hljs-comment">//&#x6574;&#x6570;&#x76F8;&#x9664;&#x53EA;&#x80FD;&#x5F97;&#x5230;&#x6574;&#x6570;</span>
+
+        <span class="hljs-comment">//&#x6211;&#x5C31;&#x60F3;&#x5F97;&#x5230;&#x5C0F;&#x6570;&#xFF0C;&#x8BE5;&#x80BF;&#x4E48;&#x529E;&#x5462;?</span>
+        <span class="hljs-comment">//&#x53EA;&#x9700;&#x8981;&#x628A;&#x64CD;&#x4F5C;&#x7684;&#x6570;&#x636E;&#x4E2D;&#x4EFB;&#x610F;&#x7684;&#x4E00;&#x4E2A;&#x6570;&#x636E;&#x53D8;&#x4E3A;&#x6D6E;&#x70B9;&#x6570;</span>
+        System.out.println(x*<span class="hljs-number">1.0</span>/y);
+
+        <span class="hljs-comment">//%&#x7684;&#x5E94;&#x7528;</span>
+        System.out.println(x%y); <span class="hljs-comment">//&#x5F97;&#x5230;&#x7684;&#x662F;&#x4F59;&#x6570;</span>
+    }
+}
+</code></pre>
+<pre><code class="lang-java"><span class="hljs-comment">/*
+    ++,--&#x8FD0;&#x7B97;&#x7B26;&#x7684;&#x4F7F;&#x7528;&#xFF1A;
+        &#x5355;&#x72EC;&#x4F7F;&#x7528;&#xFF1A;
+            &#x653E;&#x5728;&#x64CD;&#x4F5C;&#x6570;&#x7684;&#x524D;&#x9762;&#x548C;&#x540E;&#x9762;&#x6548;&#x679C;&#x4E00;&#x6837;&#x3002;(&#x8FD9;&#x79CD;&#x7528;&#x6CD5;&#x662F;&#x6211;&#x4EEC;&#x6BD4;&#x8F83;&#x5E38;&#x89C1;&#x7684;)
+        &#x53C2;&#x4E0E;&#x8FD0;&#x7B97;&#x4F7F;&#x7528;&#xFF1A;
+            &#x653E;&#x5728;&#x64CD;&#x4F5C;&#x6570;&#x7684;&#x524D;&#x9762;&#xFF0C;&#x5148;&#x81EA;&#x589E;&#x6216;&#x8005;&#x81EA;&#x51CF;&#xFF0C;&#x7136;&#x540E;&#x518D;&#x53C2;&#x4E0E;&#x8FD0;&#x7B97;&#x3002;
+            &#x653E;&#x5728;&#x64CD;&#x4F5C;&#x6570;&#x7684;&#x540E;&#x9762;&#xFF0C;&#x5148;&#x53C2;&#x4E0E;&#x8FD0;&#x7B97;&#xFF0C;&#x518D;&#x81EA;&#x589E;&#x6216;&#x8005;&#x81EA;&#x51CF;&#x3002;
+
+    &#x4F5C;&#x7528;&#xFF1A;&#x5C31;&#x662F;&#x5BF9;&#x53D8;&#x91CF;&#x8FDB;&#x884C;&#x81EA;&#x589E;1&#x6216;&#x8005;&#x81EA;&#x51CF;1&#x3002;
+*/</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">OperatorDemo2</span> </span>{
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+            <span class="hljs-comment">//&#x5B9A;&#x4E49;&#x4E24;&#x4E2A;&#x53D8;&#x91CF;</span>
+            <span class="hljs-keyword">int</span> x = <span class="hljs-number">3</span>;
+            <span class="hljs-keyword">int</span> y = <span class="hljs-number">4</span>;
+
+            <span class="hljs-comment">//&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x62FC;&#x63A5;</span>
+            <span class="hljs-comment">//System.out.println(&quot;x:&quot;+x);</span>
+            <span class="hljs-comment">//System.out.println(&quot;y:&quot;+y);</span>
+
+            System.out.println(<span class="hljs-string">&quot;x:&quot;</span>+x+<span class="hljs-string">&quot;,y:&quot;</span>+y);
+
+            <span class="hljs-comment">//&#x5355;&#x72EC;&#x4F7F;&#x7528;</span>
+            <span class="hljs-comment">//x++;</span>
+            <span class="hljs-comment">//y--;</span>
+            ++x;
+            --y;
+            <span class="hljs-comment">//System.out.println(x);</span>
+            System.out.println(<span class="hljs-string">&quot;x:&quot;</span>+x+<span class="hljs-string">&quot;,y:&quot;</span>+y);
+
+            <span class="hljs-comment">//&#x610F;&#x5916;&#x7684;&#x7C7B;&#x578B;,&#x5E38;&#x91CF;&#x662F;&#x4E0D;&#x53EF;&#x4EE5;&#x8FD9;&#x6837;&#x505A;&#x7684;</span>
+            <span class="hljs-comment">//System.out.println(10++);</span>
+
+            System.out.println(<span class="hljs-string">&quot;-------------------&quot;</span>);
+            <span class="hljs-comment">//&#x53C2;&#x4E0E;&#x8FD0;&#x7B97;&#x4F7F;&#x7528;</span>
+            <span class="hljs-keyword">int</span> a = <span class="hljs-number">3</span>;
+            <span class="hljs-keyword">int</span> b = <span class="hljs-number">4</span>;
+
+            <span class="hljs-comment">//int c = a++;</span>
+            <span class="hljs-comment">//int d = b--;</span>
+
+            <span class="hljs-keyword">int</span> c = ++a;
+            <span class="hljs-keyword">int</span> d = --b;
+
+            System.out.println(<span class="hljs-string">&quot;a:&quot;</span>+a); <span class="hljs-comment">//4, 4</span>
+            System.out.println(<span class="hljs-string">&quot;b:&quot;</span>+b); <span class="hljs-comment">//3, 3</span>
+            System.out.println(<span class="hljs-string">&quot;c:&quot;</span>+c); <span class="hljs-comment">//3, 4</span>
+            System.out.println(<span class="hljs-string">&quot;d:&quot;</span>+d); <span class="hljs-comment">//4, 3</span>
+
+            <span class="hljs-comment">//&#x5148;&#x8F93;&#x51FA;&#x540E;&#x81EA;&#x589E;</span>
+            <span class="hljs-keyword">int</span> i =<span class="hljs-number">1</span>;
+            System.out.println(i++);
+            <span class="hljs-comment">//</span>
+                    <span class="hljs-keyword">int</span> i = <span class="hljs-number">1</span>;
+                    <span class="hljs-keyword">for</span> (; i &lt; <span class="hljs-number">5</span>; i++) {
+                        System.out.println(i);
+                    }
+                    System.out.println(i);
+
+        }
+}
+</code></pre>
+<pre><code class="lang-java"><span class="hljs-comment">/*
+    +&#x7684;&#x7528;&#x6CD5;&#xFF1A;
+        A:&#x52A0;&#x6CD5;
+        B:&#x6B63;&#x53F7;
+        C:&#x5B57;&#x7B26;&#x4E32;&#x8FDE;&#x63A5;&#x7B26;
+*/</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">OperatorDemo3</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        <span class="hljs-comment">//&#x52A0;&#x6CD5;</span>
+        System.out.println(<span class="hljs-number">3</span>+<span class="hljs-number">4</span>);
+
+        <span class="hljs-comment">//&#x6B63;&#x53F7;</span>
+        System.out.println(+<span class="hljs-number">4</span>);
+
+        System.out.println(<span class="hljs-string">&apos;a&apos;</span>);
+        System.out.println(<span class="hljs-string">&apos;a&apos;</span>+<span class="hljs-number">1</span>); <span class="hljs-comment">//&#x8FD9;&#x91CC;&#x662F;&#x52A0;&#x6CD5;</span>
+
+        <span class="hljs-comment">//&#x5B57;&#x7B26;&#x4E32;&#x8FDE;&#x63A5;&#x7B26;</span>
+        System.out.println(<span class="hljs-string">&quot;hello&quot;</span>+<span class="hljs-string">&apos;a&apos;</span>+<span class="hljs-number">1</span>);
+        System.out.println(<span class="hljs-string">&apos;a&apos;</span>+<span class="hljs-number">1</span>+<span class="hljs-string">&quot;hello&quot;</span>);
+    }
+}
+</code></pre>
+<pre><code class="lang-jav">/*
+    ++,--&#x7684;&#x7EC3;&#x4E60;&#x9898;
+
+    &#x7B2C;&#x4E00;&#x9898;&#xFF1A;
+    int a = 10;
+    int b = 10;
+    int c = 10;
+
+    a = b++;
+    c = --a;
+    b = ++a;
+    a = c--;
+    &#x8BF7;&#x5206;&#x522B;&#x8BA1;&#x7B97;&#x51FA;a,b,c&#x7684;&#x503C;
+
+    &#x7B2C;&#x4E8C;&#x9898;&#xFF1A;
+    int x = 4;
+    int y = (x++)+(++x)+(x*10);
+    &#x8BF7;&#x5206;&#x522B;&#x8BA1;&#x7B97;&#x51FA;x,y&#x7684;&#x503C;
+*/
+class OperatorTest {
+    public static void main(String[] args) {
+        int a = 10;
+        int b = 10;
+        int c = 10;
+
+        a = b++; //a=10,b=11,c=10
+        c = --a; //a=9,b=11,c=9
+        b = ++a; //a=10,b=10,c=9
+        a = c--; //a=9,b=10,c=8
+
+        System.out.println(&quot;a:&quot;+a);
+        System.out.println(&quot;b:&quot;+b);
+        System.out.println(&quot;c:&quot;+c);
+        System.out.println(&quot;--------------&quot;);
+
+        int x = 4;
+        int y = (x++)+(++x)+(x*10);
+        //4+6+60
+        //x=5,6
+
+        System.out.println(&quot;x:&quot;+x);
+        System.out.println(&quot;y:&quot;+y);
+    }
+}
+</code></pre>
+<h3 id="&#x5173;&#x7CFB;&#x8FD0;&#x7B97;&#x7B26;"><a name="&#x5173;&#x7CFB;&#x8FD0;&#x7B97;&#x7B26;" class="anchor-navigation-ex-anchor" href="#&#x5173;&#x7CFB;&#x8FD0;&#x7B97;&#x7B26;"><i class="fa fa-link" aria-hidden="true"></i></a>9.3. &#x5173;&#x7CFB;&#x8FD0;&#x7B97;&#x7B26;</h3>
+<p>&#x200B;        <img src="../images/1570675084201.png" alt="1570675084201"></p>
+<p>&#x200B;        A:==,!=,&gt;,&gt;=,&lt;,&lt;=</p>
+<p>&#x200B;        B:&#x65E0;&#x8BBA;&#x8FD0;&#x7B97;&#x7B26;&#x4E24;&#x7AEF;&#x7B80;&#x5355;&#x8FD8;&#x662F;&#x590D;&#x6742;&#x6700;&#x7EC8;&#x7ED3;&#x679C;&#x662F;boolean&#x7C7B;&#x578B;&#x3002;</p>
+<p>&#x200B;        C:&#x5343;&#x4E07;&#x4E0D;&#x8981;&#x628A;==&#x5199;&#x6210;&#x4E86;=</p>
+<pre><code>/*
+    &#x6BD4;&#x8F83;&#x8FD0;&#x7B97;&#x7B26;&#xFF1A;
+        ==,!=,&gt;,&gt;=,&lt;,&lt;=
+
+    &#x7279;&#x70B9;&#xFF1A;
+        &#x65E0;&#x8BBA;&#x4F60;&#x7684;&#x64CD;&#x4F5C;&#x662F;&#x7B80;&#x5355;&#x8FD8;&#x662F;&#x590D;&#x6742;&#xFF0C;&#x7ED3;&#x679C;&#x662F;boolean&#x7C7B;&#x578B;&#x3002;
+
+    &#x6CE8;&#x610F;&#x4E8B;&#x9879;&#xFF1A;
+        &quot;==&quot;&#x4E0D;&#x80FD;&#x5199;&#x6210;&quot;=&quot;&#x3002;
+*/
+class OperatorDemo {
+    public static void main(String[] args) {
+        int x = 3;
+        int y = 4;
+        int z = 3;
+
+        System.out.println(x == y);
+        System.out.println(x == z);
+        System.out.println((x+y) == (x+z));
+        System.out.println(&quot;------------&quot;);
+
+        System.out.println(x != y);
+        System.out.println(x &gt; y);
+        System.out.println(x &gt;= y);
+        System.out.println(x &lt; y);
+        System.out.println(x &lt;= y);
+        System.out.println(&quot;------------&quot;);
+
+        int a = 10;
+        int b = 20;
+
+        //boolean flag = (a == b);
+        //boolean flag = (a = b); //&#x8FD9;&#x4E2A;&#x662F;&#x6709;&#x95EE;&#x9898;&#x7684;&#xFF0C;&#x4E0D;&#x517C;&#x5BB9;&#x7684;&#x7C7B;&#x578B;
+        //System.out.println(flag);
+
+        int c = (a = b); //&#x628A;b&#x8D4B;&#x503C;&#x7ED9;a&#xFF0C;&#x7136;&#x540E;&#x628A;a&#x7559;&#x4E0B;&#x6765;
+        System.out.println(c);
+    }
+}
+</code></pre><h3 id="&#x903B;&#x8F91;&#x8FD0;&#x7B97;&#x7B26;"><a name="&#x903B;&#x8F91;&#x8FD0;&#x7B97;&#x7B26;" class="anchor-navigation-ex-anchor" href="#&#x903B;&#x8F91;&#x8FD0;&#x7B97;&#x7B26;"><i class="fa fa-link" aria-hidden="true"></i></a>9.4. &#x903B;&#x8F91;&#x8FD0;&#x7B97;&#x7B26;</h3>
+<p>&#x200B;        <img src="../images/1570675127911.png" alt="1570675127911"></p>
+<p>&#x200B;        A:&amp;,|,^,!,&amp;&amp;,||</p>
+<p>&#x200B;        B:&#x903B;&#x8F91;&#x8FD0;&#x7B97;&#x7B26;&#x7528;&#x4E8E;&#x8FDE;&#x63A5;boolean&#x7C7B;&#x578B;&#x7684;&#x5F0F;&#x5B50;</p>
+<p>&#x200B;        C:&#x7ED3;&#x8BBA;</p>
+<p>&#x200B;            &amp;:&#x6709;false&#x5219;false</p>
+<p>&#x200B;            |:&#x6709;true&#x5219;true</p>
+<p>&#x200B;            ^:&#x76F8;&#x540C;&#x5219;false&#xFF0C;&#x4E0D;&#x540C;&#x5219;true&#x3002;</p>
+<p>&#x200B;                &#x60C5;&#x4FA3;&#x5173;&#x7CFB;&#x3002;</p>
+<p>&#x200B;            !:&#x975E;true&#x5219;false&#xFF0C;&#x975E;false&#x5219;true</p>
+<p>&#x200B;            </p>
+<p>&#x200B;            &amp;&amp;:&#x7ED3;&#x679C;&#x548C;&amp;&#x662F;&#x4E00;&#x6837;&#x7684;&#xFF0C;&#x53EA;&#x4E0D;&#x8FC7;&#x6709;&#x77ED;&#x8DEF;&#x6548;&#x679C;&#x3002;&#x5DE6;&#x8FB9;&#x662F;false&#xFF0C;&#x53F3;&#x8FB9;&#x4E0D;&#x6267;&#x884C;&#x3002;</p>
+<p>&#x200B;            ||:&#x7ED3;&#x679C;&#x548C;|&#x662F;&#x4E00;&#x6837;&#x7684;&#xFF0C;&#x53EA;&#x4E0D;&#x8FC7;&#x6709;&#x77ED;&#x8DEF;&#x6548;&#x679C;&#x3002;&#x5DE6;&#x8FB9;&#x662F;true&#xFF0C;&#x53F3;&#x8FB9;&#x4E0D;&#x6267;&#x884C;&#x3002;</p>
+<pre><code class="lang-java"><span class="hljs-comment">/*
+    &#x903B;&#x8F91;&#x8FD0;&#x7B97;&#x7B26;&#xFF1A;
+        &amp;,|,^,!
+        &amp;&amp;,||
+
+    &#x7279;&#x70B9;&#xFF1A;
+        &#x903B;&#x8F91;&#x8FD0;&#x7B97;&#x7B26;&#x4E00;&#x822C;&#x7528;&#x4E8E;&#x8FDE;&#x63A5;boolean&#x7C7B;&#x578B;&#x7684;&#x8868;&#x8FBE;&#x5F0F;&#x6216;&#x8005;&#x503C;&#x3002;
+
+        &#x8868;&#x8FBE;&#x5F0F;&#xFF1A;&#x5C31;&#x662F;&#x7528;&#x8FD0;&#x7B97;&#x7B26;&#x628A;&#x5E38;&#x91CF;&#x6216;&#x8005;&#x53D8;&#x91CF;&#x8FDE;&#x63A5;&#x8D77;&#x6765;&#x7684;&#x7B26;&#x5408;java&#x8BED;&#x6CD5;&#x7684;&#x5F0F;&#x5B50;&#x3002;
+            &#x7B97;&#x672F;&#x8868;&#x8FBE;&#x5F0F;&#xFF1A;a + b
+            &#x6BD4;&#x8F83;&#x8868;&#x8FBE;&#x5F0F;&#xFF1A;a == b
+
+    &#x7ED3;&#x8BBA;&#xFF1A;
+        &amp;&#x903B;&#x8F91;&#x4E0E;:&#x6709;false&#x5219;false&#x3002;
+        |&#x903B;&#x8F91;&#x6216;:&#x6709;true&#x5219;true&#x3002;
+        ^&#x903B;&#x8F91;&#x5F02;&#x6216;:&#x76F8;&#x540C;&#x4E3A;false&#xFF0C;&#x4E0D;&#x540C;&#x4E3A;true&#x3002;
+            &#x4E3E;&#x4F8B;&#xFF1A;&#x60C5;&#x4FA3;&#x5173;&#x7CFB;&#x3002;&#x7537;&#x7537;,&#x7537;&#x5973;,&#x5973;&#x7537;,&#x5973;&#x5973;
+        !&#x903B;&#x8F91;&#x975E;:&#x975E;false&#x5219;true&#xFF0C;&#x975E;true&#x5219;false&#x3002;
+            &#x7279;&#x70B9;&#xFF1A;&#x5076;&#x6570;&#x4E2A;&#x4E0D;&#x6539;&#x53D8;&#x672C;&#x8EAB;&#x3002;
+*/</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">OperatorDemo</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        <span class="hljs-keyword">int</span> a = <span class="hljs-number">3</span>;
+        <span class="hljs-keyword">int</span> b = <span class="hljs-number">4</span>;
+        <span class="hljs-keyword">int</span> c = <span class="hljs-number">5</span>;
+
+        <span class="hljs-comment">//&amp;&#x903B;&#x8F91;&#x4E0E;</span>
+        System.out.println((a &gt; b) &amp; (a &gt; c)); <span class="hljs-comment">//false &amp; false = false</span>
+        System.out.println((a &gt; b) &amp; (a &lt; c)); <span class="hljs-comment">//false &amp; true = false</span>
+        System.out.println((a &lt; b) &amp; (a &gt; c)); <span class="hljs-comment">//true &amp; false = false</span>
+        System.out.println((a &lt; b) &amp; (a &lt; c)); <span class="hljs-comment">//true &amp; true = true</span>
+        System.out.println(<span class="hljs-string">&quot;---------------&quot;</span>);
+
+        <span class="hljs-comment">//|&#x903B;&#x8F91;&#x6216;</span>
+        System.out.println((a &gt; b) | (a &gt; c)); <span class="hljs-comment">//false | false = false</span>
+        System.out.println((a &gt; b) | (a &lt; c)); <span class="hljs-comment">//false | true = true</span>
+        System.out.println((a &lt; b) | (a &gt; c)); <span class="hljs-comment">//true | false = true</span>
+        System.out.println((a &lt; b) | (a &lt; c)); <span class="hljs-comment">//true | true = true</span>
+        System.out.println(<span class="hljs-string">&quot;---------------&quot;</span>);
+
+        <span class="hljs-comment">//^&#x903B;&#x8F91;&#x5F02;&#x6216;</span>
+        System.out.println((a &gt; b) ^ (a &gt; c)); <span class="hljs-comment">//false ^ false = false</span>
+        System.out.println((a &gt; b) ^ (a &lt; c)); <span class="hljs-comment">//false ^ true = true</span>
+        System.out.println((a &lt; b) ^ (a &gt; c)); <span class="hljs-comment">//true ^ false = true</span>
+        System.out.println((a &lt; b) ^ (a &lt; c)); <span class="hljs-comment">//true ^ true = false</span>
+        System.out.println(<span class="hljs-string">&quot;---------------&quot;</span>);
+
+        <span class="hljs-comment">//!&#x903B;&#x8F91;&#x975E;</span>
+        System.out.println(!(a &gt; b)); <span class="hljs-comment">//!false = true</span>
+        System.out.println(!(a &lt; b)); <span class="hljs-comment">//!true = false</span>
+        System.out.println(!!(a &gt; b)); <span class="hljs-comment">//!!false = false</span>
+        System.out.println(!!!(a &gt; b)); <span class="hljs-comment">//!!false = true</span>
+    }
+}
+</code></pre>
+<pre><code class="lang-java"><span class="hljs-comment">/*
+    &amp;&amp;&#x548C;&amp;&#x7684;&#x533A;&#x522B;? &#x540C;&#x7406;||&#x548C;|&#x7684;&#x533A;&#x522B;?
+        A:&#x6700;&#x7EC8;&#x7ED3;&#x679C;&#x4E00;&#x6837;&#x3002;
+        B:&amp;&amp;&#x5177;&#x6709;&#x77ED;&#x8DEF;&#x6548;&#x679C;&#x3002;&#x5DE6;&#x8FB9;&#x662F;false&#xFF0C;&#x53F3;&#x8FB9;&#x4E0D;&#x6267;&#x884C;&#x3002;
+
+    &#x5F00;&#x53D1;&#x4E2D;&#x5E38;&#x7528;&#x7684;&#x903B;&#x8F91;&#x8FD0;&#x7B97;&#x7B26;&#xFF1A;
+        &amp;&amp;,||,!
+*/</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">OperatorDemo2</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        <span class="hljs-keyword">int</span> a = <span class="hljs-number">3</span>;
+        <span class="hljs-keyword">int</span> b = <span class="hljs-number">4</span>;
+        <span class="hljs-keyword">int</span> c = <span class="hljs-number">5</span>;
+
+        <span class="hljs-comment">//&amp;&amp;&#x53CC;&#x4E0E;</span>
+        System.out.println((a &gt; b) &amp;&amp; (a &gt; c)); <span class="hljs-comment">//false &amp;&amp; false = false</span>
+        System.out.println((a &gt; b) &amp;&amp; (a &lt; c)); <span class="hljs-comment">//false &amp;&amp; true = false</span>
+        System.out.println((a &lt; b) &amp;&amp; (a &gt; c)); <span class="hljs-comment">//true &amp;&amp; false = false</span>
+        System.out.println((a &lt; b) &amp;&amp; (a &lt; c)); <span class="hljs-comment">//true &amp;&amp; true = true</span>
+        System.out.println(<span class="hljs-string">&quot;----------------&quot;</span>);
+
+        <span class="hljs-keyword">int</span> x = <span class="hljs-number">3</span>;
+        <span class="hljs-keyword">int</span> y = <span class="hljs-number">4</span>;
+
+        <span class="hljs-comment">//boolean b1 = ((x++ == 3) &amp; (y++ == 4));</span>
+        <span class="hljs-comment">//boolean b1 = ((x++ == 3) &amp;&amp; (y++ == 4));</span>
+        <span class="hljs-comment">//boolean b1 = ((++x == 3) &amp; (y++ == 4));</span>
+        <span class="hljs-keyword">boolean</span> b1 = ((++x == <span class="hljs-number">3</span>) &amp;&amp; (y++ == <span class="hljs-number">4</span>));
+        System.out.println(<span class="hljs-string">&quot;x:&quot;</span>+x);
+        System.out.println(<span class="hljs-string">&quot;y:&quot;</span>+y);
+        System.out.println(b1);
+    }
+}
+
+        <span class="hljs-keyword">int</span> a = <span class="hljs-number">1</span>;
+        <span class="hljs-keyword">int</span> b = <span class="hljs-number">2</span>;
+        <span class="hljs-keyword">int</span> c = <span class="hljs-number">3</span>;
+        <span class="hljs-comment">//System.out.println(b++ &lt; a++ &amp;&amp; c++ &lt; a++);</span>
+        <span class="hljs-comment">//System.out.println(a + &quot;\t&quot; + b + &quot;\t&quot; + c);</span>
+        <span class="hljs-comment">//System.out.println(b++ &lt; a++ &amp; c++ &lt; a++);</span>
+        <span class="hljs-comment">//System.out.println(a + &quot;\t&quot; + b + &quot;\t&quot; + c);</span>
+</code></pre>
+<h3 id="&#x4F4D;&#x8FD0;&#x7B97;&#x7B26;"><a name="&#x4F4D;&#x8FD0;&#x7B97;&#x7B26;" class="anchor-navigation-ex-anchor" href="#&#x4F4D;&#x8FD0;&#x7B97;&#x7B26;"><i class="fa fa-link" aria-hidden="true"></i></a>9.5. &#x4F4D;&#x8FD0;&#x7B97;&#x7B26;</h3>
+<p>&#x6309;&#x4F4D;&#x4E0E;&#x8FD0;&#x7B97;&#x7B26;&#xFF08;&amp;&#xFF09; </p>
+<p>&#x6309;&#x4F4D;&#x6216;&#x8FD0;&#x7B97;&#x7B26;&#xFF08;|&#xFF09; </p>
+<p>&#x6309;&#x4F4D;&#x5F02;&#x6216;&#x8FD0;&#x7B97;&#x7B26;&#xFF08;^&#xFF09; </p>
+<p>&#x6309;&#x4F4D;&#x53D6;&#x53CD;&#x8FD0;&#x7B97;&#x7B26;&#xFF08;~&#xFF09; </p>
+<p>&#x5DE6;&#x79FB;&#x4F4D;&#x8FD0;&#x7B97;&#x7B26;&#xFF08;&lt;&lt;&#xFF09;&#x548C;&#x53F3;&#x79FB;&#x4F4D;&#x8FD0;&#x7B97;&#x7B26;&#xFF08;&gt;&gt;&#xFF09;</p>
+<p>1&#xFF0E;&#x6309;&#x4F4D;&#x4E0E;&#x8FD0;&#x7B97;&#xFF08;&amp;&#xFF09;</p>
+<p>&#x53C2;&#x4E0E;&#x8FD0;&#x7B97;&#x7684;&#x4E24;&#x4E2A;&#x503C;&#xFF0C;&#x5982;&#x679C;&#x4E24;&#x4E2A;&#x76F8;&#x5E94;&#x4F4D;&#x90FD;&#x4E3A;1&#xFF0C;&#x5219;&#x8BE5;&#x4F4D;&#x7684;&#x7ED3;&#x679C;&#x4E3A;1&#xFF0C;&#x5426;&#x5219;&#x4E3A;0&#x3002;</p>
+<p><strong>&#x5373;&#xFF1A;0&amp;0=0&#xFF0C;0&amp;1=0&#xFF0C;1&amp;0=0&#xFF0C;1&amp;1=1</strong> </p>
+<p>2&#xFF0E;&#x6309;&#x4F4D;&#x6216;&#x8FD0;&#x7B97;&#xFF08;|&#xFF09;</p>
+<p>&#x53C2;&#x4E0E;&#x8FD0;&#x7B97;&#x7684;&#x4E24;&#x4E2A;&#x503C;&#xFF0C;&#x5982;&#x679C;&#x4E24;&#x4E2A;&#x76F8;&#x5E94;&#x4F4D;&#x90FD;&#x662F;0&#xFF0C;&#x5219;&#x8BE5;&#x4F4D;&#x7ED3;&#x679C;&#x4E3A;0&#xFF0C;&#x5426;&#x5219;&#x4E3A;1&#x3002;</p>
+<p><strong>&#x5373;&#xFF1A;0|0=0&#xFF0C;0|1=1&#xFF0C;1|0=1&#xFF0C;1|1=1</strong> </p>
+<p>3&#xFF0E;&#x6309;&#x4F4D;&#x5F02;&#x6216;&#x8FD0;&#x7B97;&#xFF08;^&#xFF09;</p>
+<p>&#x53C2;&#x4E0E;&#x8FD0;&#x7B97;&#x7684;&#x4E24;&#x4E2A;&#x503C;&#xFF0C;&#x5982;&#x679C;&#x4E24;&#x4E2A;&#x76F8;&#x5E94;&#x4F4D;&#x7684;&#x67D0;&#x4E00;&#x4E2A;&#x662F;1&#xFF0C;&#x53E6;&#x4E00;&#x4E2A;&#x662F;0&#xFF0C;&#x90A3;&#x4E48;&#x6309;&#x4F4D;&#x5F02;&#x6216;&#xFF08;^&#xFF09;&#x5728;&#x8BE5;&#x4F4D;&#x7684;&#x7ED3;&#x679C;&#x4E3A;1&#x3002;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#x5982;&#x679C;&#x4E24;&#x4E2A;&#x76F8;&#x5E94;&#x4F4D;&#x76F8;&#x540C;&#xFF0C;&#x8F93;&#x51FA;&#x4F4D;&#x4E3A;0&#xFF0C;&#x5426;&#x5219;&#x4E3A;1&#x3002;</p>
+<p><strong>&#x5373;&#xFF1A;0^0=0&#xFF0C;0^1=1&#xFF0C;1^0=1&#xFF0C;1^1=0</strong> </p>
+<p>4&#xFF0E;&#x6309;&#x4F4D;&#x53D6;&#x53CD;&#x8FD0;&#x7B97;&#xFF08;~&#xFF09;</p>
+<p>&#x6309;&#x4F4D;&#x53D6;&#x53CD;&#x8FD0;&#x7B97;&#xFF08;~&#xFF09;&#x5C5E;&#x4E8E;&#x4E00;&#x5143;&#x8FD0;&#x7B97;&#x7B26;&#xFF0C;&#x5B83;&#x53EA;&#x5BF9;&#x4E00;&#x4E2A;&#x81EA;&#x53D8;&#x91CF;&#x8FDB;&#x884C;&#x64CD;&#x4F5C;&#xFF08;&#x5176;&#x4ED6;&#x6240;&#x6709;&#x8FD0;&#x7B97;&#x7B26;&#x90FD;&#x662F;&#x4E8C;&#x5143;&#x8FD0;&#x7B97;&#x7B26;&#xFF09;&#x3002;&#x6309;&#x4F4D;&#x53D6;&#x53CD;&#x751F;&#x6210;&#x4E0E;&#x8F93;&#x5165;&#x4F4D;&#x7684;&#x76F8;&#x53CD;&#x7684;&#x503C;&#x2014;&#x2014;&#x82E5;&#x8F93;&#x5165;0&#xFF0C;&#x5219;&#x8F93;&#x51FA;1&#xFF1B;&#x8F93;&#x5165;1&#xFF0C;&#x5219;&#x8F93;&#x51FA;0&#x3002;</p>
+<p><strong>&#x5373;&#xFF1A;~0=1&#xFF0C;~1=0</strong> </p>
+<p>5&#xFF0E;&#x5DE6;&#x79FB;&#x4F4D;&#x8FD0;&#x7B97;&#x7B26;&#xFF08;&lt;&lt;&#xFF09;</p>
+<p>&#x8FD0;&#x7B97;&#x7B26;&lt;&lt;&#x6267;&#x884C;&#x4E00;&#x4E2A;&#x5DE6;&#x79FB;&#x4F4D;&#x3002;&#x4F5C;&#x5DE6;&#x79FB;&#x4F4D;&#x8FD0;&#x7B97;&#x65F6;&#xFF0C;&#xFF0C;&#x9AD8;&#x4F4D;&#x6EA2;&#x51FA;&#xFF0C;&#x4F4E;&#x4F4D;&#x8865;&#x96F6;&#xFF0C;&#x53F3;&#x8FB9;&#x7684;&#x7A7A;&#x4F4D;&#x8865;0&#x3002;&#x5728;&#x4E0D;&#x4EA7;&#x751F;&#x6EA2;&#x51FA;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x6570;&#x636E;&#x5DE6;&#x79FB;1&#x4F4D;&#x76F8;&#x5F53;&#x4E8E;&#x4E58;&#x4EE5;2&#x3002;&#x4F8B;&#x5982;&#xFF1A;</p>
+<p><strong>int a=64,b;</strong>         <strong>b=a&lt;&lt;1;</strong>        <strong>//b=128</strong> </p>
+<p>6&#xFF0E;&#x53F3;&#x79FB;&#x4F4D;&#x8FD0;&#x7B97;&#x7B26;&#xFF08;&gt;&gt;&#x4E0E;&gt;&gt;&gt;&#xFF09;</p>
+<p>&#x8FD0;&#x7B97;&#x7B26;&gt;&gt;&#x6267;&#x884C;&#x4E00;&#x4E2A;&#x53F3;&#x79FB;&#x4F4D;&#xFF08;&#x5E26;&#x7B26;&#x53F7;&#xFF09;&#xFF0C;&#x64CD;&#x4F5C;&#x6570;&#x7684;&#x6784;&#x6210;&#x4E8C;&#x8FDB;&#x5236;&#x4F4D;&#x53F3;&#x79FB;&#x82E5;&#x5E72;&#x4F4D;&#xFF0C;&#x5730;&#x4F4D;&#x6EA2;&#x51FA;&#x820D;&#x5F03;&#xFF0C;&#x9AD8;&#x4F4D;&#x8865;&#x5145;&#x539F;&#x6765;&#x9AD8;&#x4F4D;&#x7684;&#x503C;&#x3002;&#xFF08;&#x53F3;&#x79FB;&#x4E00;&#x4F4D;&#x76F8;&#x5F53;&#x4E8E;&#x9664;2&#x53D6;&#x5546;&#xFF09; </p>
+<p>&#x4F8B;&#x5982;&#xFF1A;</p>
+<p><strong>int a=16,b;</strong>         <strong>b=a&gt;&gt;2;</strong>         <strong>//b=4</strong> </p>
+<ul>
+<li><p>^&#x7684;&#x7279;&#x6B8A;&#x7528;&#x6CD5;:&#x4E00;&#x4E2A;&#x6570;&#x636E;&#x9488;&#x5BF9;&#x53E6;&#x4E00;&#x4E2A;&#x6570;&#x636E;&#x4F4D;&#x5F02;&#x6216;&#x4E24;&#x6B21;&#xFF0C;&#x8BE5;&#x6570;&#x4E0D;&#x53D8;</p>
+</li>
+<li><p>&#x9762;&#x8BD5;&#x9898;</p>
+<p>a:&#x8BF7;&#x5B9E;&#x73B0;&#x4E24;&#x4E2A;&#x53D8;&#x91CF;&#x7684;&#x4EA4;&#x6362;</p>
+<p>&#x200B;                **&#x91C7;&#x7528;&#x7B2C;&#x4E09;&#x65B9;&#x53D8;&#x91CF;</p>
+<p>&#x200B;                **&#x7528;&#x4F4D;&#x5F02;&#x6216;&#x8FD0;&#x7B97;&#x7B26;</p>
+<p>&#x200B;                    &#x5DE6;&#x8FB9;a,b,a</p>
+<p>&#x200B;                    &#x53F3;&#x8FB9;a^b</p>
+<p>&#x200B;            b:&#x8BF7;&#x7528;&#x6700;&#x6709;&#x6548;&#x7387;&#x7684;&#x65B9;&#x5F0F;&#x8BA1;&#x7B97;&#x51FA;2&#x4E58;&#x4EE5;8&#x7684;&#x7ED3;&#x679C;</p>
+<p>&#x200B;                2&lt;&lt;3</p>
+</li>
+</ul>
+<pre><code class="lang-java"><span class="hljs-comment">/*
+    &#x4F4D;&#x8FD0;&#x7B97;&#x7B26;&#xFF1A;
+        &amp;,|,^,~
+        &lt;&lt;,&gt;&gt;,&gt;&gt;&gt;
+
+    &#x6CE8;&#x610F;&#xFF1A;
+        &#x8981;&#x505A;&#x4F4D;&#x8FD0;&#x7B97;&#xFF0C;&#x9996;&#x5148;&#x8981;&#x628A;&#x6570;&#x636E;&#x8F6C;&#x6362;&#x4E3A;&#x4E8C;&#x8FDB;&#x5236;&#x3002;
+*/</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">OperatorDemo</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        <span class="hljs-comment">//&amp;,|,^,~</span>
+
+        <span class="hljs-keyword">int</span> a = <span class="hljs-number">3</span>;
+        <span class="hljs-keyword">int</span> b = <span class="hljs-number">4</span>;
+
+        System.out.println(<span class="hljs-number">3</span> &amp; <span class="hljs-number">4</span>);
+        System.out.println(<span class="hljs-number">3</span> | <span class="hljs-number">4</span>);
+        System.out.println(<span class="hljs-number">3</span> ^ <span class="hljs-number">4</span>);
+        System.out.println(~<span class="hljs-number">3</span>);
+    }
+}
+<span class="hljs-comment">/*
+    &#x5206;&#x6790;&#xFF1A;&#x56E0;&#x4E3A;&#x662F;&#x4F4D;&#x8FD0;&#x7B97;&#xFF0C;&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x5FC5;&#x987B;&#x5148;&#x628A;&#x6570;&#x636E;&#x6362;&#x7B97;&#x6210;&#x4E8C;&#x8FDB;&#x5236;&#x3002;
+
+    3&#x7684;&#x4E8C;&#x8FDB;&#x5236;&#xFF1A;11
+        00000000 00000000 00000000 00000011
+    4&#x7684;&#x4E8C;&#x8FDB;&#x5236;&#xFF1A;100
+        00000000 00000000 00000000 00000100
+
+    &amp;&#x4F4D;&#x4E0E;&#x8FD0;&#x7B97;&#xFF1A;&#x6709;0&#x5219;0&#x3002;
+        00000000 00000000 00000000 00000011
+       &amp;00000000 00000000 00000000 00000100
+        -----------------------------------
+        00000000 00000000 00000000 00000000
+        &#x7ED3;&#x679C;&#x662F;&#xFF1A;0
+
+    |&#x4F4D;&#x6216;&#x8FD0;&#x7B97;&#xFF1A;&#x6709;1&#x5219;1&#x3002;
+        00000000 00000000 00000000 00000011
+       |00000000 00000000 00000000 00000100
+        -----------------------------------
+        00000000 00000000 00000000 00000111
+        &#x7ED3;&#x679C;&#x662F;&#xFF1A;7
+
+    ^&#x4F4D;&#x5F02;&#x6216;&#x8FD0;&#x7B97;&#xFF1A;&#x76F8;&#x540C;&#x5219;0&#xFF0C;&#x4E0D;&#x540C;&#x5219;1&#x3002;
+        00000000 00000000 00000000 00000011
+       &amp;00000000 00000000 00000000 00000100
+        -----------------------------------
+        00000000 00000000 00000000 00000111
+        &#x7ED3;&#x679C;&#x662F;&#xFF1A;7
+
+    ~&#x6309;&#x4F4D;&#x53D6;&#x53CD;&#x8FD0;&#x7B97;&#x7B26;&#xFF1A;0&#x53D8;1&#xFF0C;1&#x53D8;0
+        00000000 00000000 00000000 00000011
+       ~11111111 11111111 11111111 11111100 (&#x8865;&#x7801;)
+
+       &#x8865;&#x7801;&#xFF1A;11111111 11111111 11111111 11111100
+       &#x53CD;&#x7801;&#xFF1A;11111111 11111111 11111111 11111011
+       &#x539F;&#x7801;&#xFF1A;10000000 00000000 00000000 00000100
+        &#x7ED3;&#x679C;&#x662F;&#xFF1A;-4
+*/</span>
+</code></pre>
+<pre><code class="lang-java"><span class="hljs-comment">/*
+    ^&#x7684;&#x7279;&#x70B9;&#xFF1A;&#x4E00;&#x4E2A;&#x6570;&#x636E;&#x5BF9;&#x53E6;&#x4E00;&#x4E2A;&#x6570;&#x636E;&#x4F4D;&#x5F02;&#x6216;&#x4E24;&#x6B21;&#xFF0C;&#x8BE5;&#x6570;&#x672C;&#x8EAB;&#x4E0D;&#x53D8;&#x3002;
+*/</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">OperatorDemo2</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        <span class="hljs-keyword">int</span> a = <span class="hljs-number">10</span>;
+        <span class="hljs-keyword">int</span> b = <span class="hljs-number">20</span>;
+
+        System.out.println(a ^ b ^ b); <span class="hljs-comment">//10</span>
+        System.out.println(a ^ b ^ a); <span class="hljs-comment">//20</span>
+    }
+}
+</code></pre>
+<pre><code class="lang-java"><span class="hljs-comment">/*
+    &lt;&lt;:&#x5DE6;&#x79FB;    &#x5DE6;&#x8FB9;&#x6700;&#x9AD8;&#x4F4D;&#x4E22;&#x5F03;&#xFF0C;&#x53F3;&#x8FB9;&#x8865;&#x9F50;0
+    &gt;&gt;:&#x53F3;&#x79FB;    &#x6700;&#x9AD8;&#x4F4D;&#x662F;0&#xFF0C;&#x5DE6;&#x8FB9;&#x8865;&#x9F50;0&#xFF1B;&#x6700;&#x9AD8;&#x4E3A;&#x662F;1&#xFF0C;&#x5DE6;&#x8FB9;&#x8865;&#x9F50;1
+    &gt;&gt;&gt;:&#x65E0;&#x7B26;&#x53F7;&#x53F3;&#x79FB; &#x65E0;&#x8BBA;&#x6700;&#x9AD8;&#x4F4D;&#x662F;0&#x8FD8;&#x662F;1&#xFF0C;&#x5DE6;&#x8FB9;&#x8865;&#x9F50;0
+
+    &#x9762;&#x8BD5;&#x9898;&#xFF1A;
+        &#x8BF7;&#x7528;&#x6700;&#x6709;&#x6548;&#x7387;&#x7684;&#x65B9;&#x5F0F;&#x5199;&#x51FA;&#x8BA1;&#x7B97;2&#x4E58;&#x4EE5;8&#x7684;&#x7ED3;&#x679C;?
+            2 * 8
+
+            2 &lt;&lt; 3
+
+*/</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">OperatorDemo3</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        <span class="hljs-comment">//&lt;&lt; &#x628A;&lt;&lt;&#x5DE6;&#x8FB9;&#x7684;&#x6570;&#x636E;&#x4E58;&#x4EE5;2&#x7684;&#x79FB;&#x52A8;&#x6B21;&#x5E42;</span>
+        System.out.println(<span class="hljs-number">3</span> &lt;&lt; <span class="hljs-number">2</span>); <span class="hljs-comment">//3*2^2 = 3*4 = 12;</span>
+
+        <span class="hljs-comment">//&gt;&gt; &#x628A;&gt;&gt;&#x5DE6;&#x8FB9;&#x7684;&#x6570;&#x636E;&#x9664;&#x4EE5;2&#x7684;&#x79FB;&#x52A8;&#x6B21;&#x5E42;</span>
+        System.out.println(<span class="hljs-number">24</span> &gt;&gt; <span class="hljs-number">2</span>); <span class="hljs-comment">//24 / 2^2 = 24 / 4 = 6</span>
+        System.out.println(<span class="hljs-number">24</span> &gt;&gt;&gt; <span class="hljs-number">2</span>);
+
+        System.out.println(-<span class="hljs-number">24</span> &gt;&gt; <span class="hljs-number">2</span>); 
+        System.out.println(-<span class="hljs-number">24</span> &gt;&gt;&gt; <span class="hljs-number">2</span>);
+    }
+}
+<span class="hljs-comment">/*
+    &#x8BA1;&#x7B97;&#x51FA;3&#x7684;&#x4E8C;&#x8FDB;&#x5236;&#xFF1A;11
+        00000000 00000000 00000000 00000011
+    (00)000000 00000000 00000000 0000001100
+
+    &gt;&gt;&#x7684;&#x79FB;&#x52A8;&#xFF1A;    
+    &#x8BA1;&#x7B97;&#x51FA;24&#x7684;&#x4E8C;&#x8FDB;&#x5236;&#xFF1A;11000
+        &#x539F;&#x7801;&#xFF1A;10000000 00000000 00000000 00011000
+        &#x53CD;&#x7801;&#xFF1A;11111111 11111111 11111111 11100111
+        &#x8865;&#x7801;&#xFF1A;11111111 11111111 11111111 11101000
+
+        11111111 11111111 11111111 11101000
+        1111111111 11111111 11111111 111010(00) &#x8865;&#x7801;
+
+        &#x8865;&#x7801;&#xFF1A;1111111111 11111111 11111111 111010
+        &#x53CD;&#x7801;&#xFF1A;1111111111 11111111 11111111 111001
+        &#x539F;&#x7801;&#xFF1A;1000000000 00000000 00000000 000110
+
+        &#x7ED3;&#x679C;&#xFF1A;-6
+
+    &gt;&gt;&gt;&#x7684;&#x79FB;&#x52A8;&#xFF1A;
+        &#x8BA1;&#x7B97;&#x51FA;24&#x7684;&#x4E8C;&#x8FDB;&#x5236;&#xFF1A;11000
+        &#x539F;&#x7801;&#xFF1A;10000000 00000000 00000000 00011000
+        &#x53CD;&#x7801;&#xFF1A;11111111 11111111 11111111 11100111
+        &#x8865;&#x7801;&#xFF1A;11111111 11111111 11111111 11101000
+
+        11111111 11111111 11111111 11101000
+        0011111111 11111111 11111111 111010(00)
+
+        &#x7ED3;&#x679C;&#xFF1A;
+*/</span>
+</code></pre>
+<pre><code class="lang-java"><span class="hljs-comment">/*
+    &#x9762;&#x8BD5;&#x9898;&#xFF1A;
+        &#x8BF7;&#x81EA;&#x5DF1;&#x5B9E;&#x73B0;&#x4E24;&#x4E2A;&#x6574;&#x6570;&#x53D8;&#x91CF;&#x7684;&#x4EA4;&#x6362;
+        &#x6CE8;&#x610F;&#xFF1A;&#x4EE5;&#x540E;&#x8BB2;&#x8BFE;&#x7684;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x6211;&#x6CA1;&#x6709;&#x660E;&#x786E;&#x6307;&#x5B9A;&#x6570;&#x636E;&#x7684;&#x7C7B;&#x578B;&#xFF0C;&#x9ED8;&#x8BA4;int&#x7C7B;&#x578B;&#x3002;
+*/</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">OperatorTest</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        <span class="hljs-keyword">int</span> a = <span class="hljs-number">10</span>;
+        <span class="hljs-keyword">int</span> b = <span class="hljs-number">20</span>;
+
+        System.out.println(<span class="hljs-string">&quot;a:&quot;</span>+a+<span class="hljs-string">&quot;,b:&quot;</span>+b);
+
+        <span class="hljs-comment">//&#x65B9;&#x5F0F;1&#xFF1A;&#x4F7F;&#x7528;&#x7B2C;&#x4E09;&#x65B9;&#x53D8;&#x91CF;(&#x5F00;&#x53D1;&#x4E2D;&#x7528;&#x7684;)</span>
+        <span class="hljs-comment">/*
+        int c = a;
+        a = b;
+        b = c;
+        System.out.println(&quot;a:&quot;+a+&quot;,b:&quot;+b);
+        System.out.println(&quot;------------&quot;);
+        */</span>
+
+        <span class="hljs-comment">//&#x65B9;&#x5F0F;2&#xFF1A;&#x7528;&#x4F4D;&#x5F02;&#x6216;&#x5B9E;&#x73B0;(&#x9762;&#x8BD5;&#x7528;)</span>
+        <span class="hljs-comment">//&#x5DE6;&#x8FB9;&#xFF1A;a,b,a</span>
+        <span class="hljs-comment">//&#x53F3;&#x8FB9;&#xFF1A;a ^ b</span>
+        <span class="hljs-comment">/*
+        a = a ^ b;
+        b = a ^ b; //a ^ b ^ b = a
+        a = a ^ b; //a ^ b ^ a = b
+        System.out.println(&quot;a:&quot;+a+&quot;,b:&quot;+b);
+        */</span>
+
+        <span class="hljs-comment">//&#x65B9;&#x5F0F;3&#xFF1A;&#x7528;&#x53D8;&#x91CF;&#x76F8;&#x52A0;&#x7684;&#x505A;&#x6CD5;</span>
+        <span class="hljs-comment">/*
+        a = a + b; //a=30
+        b = a - b; //b=10
+        a = a - b; //a=20
+        System.out.println(&quot;a:&quot;+a+&quot;,b:&quot;+b);
+        */</span>
+
+        <span class="hljs-comment">//&#x65B9;&#x5F0F;4&#xFF1A;&#x4E00;&#x53E5;&#x8BDD;&#x641E;&#x5B9A;</span>
+        b = (a+b) - (a=b); <span class="hljs-comment">//b=30-20=10,a=20</span>
+        System.out.println(<span class="hljs-string">&quot;a:&quot;</span>+a+<span class="hljs-string">&quot;,b:&quot;</span>+b);
+    }
+}
+</code></pre>
+<h3 id="&#x4E09;&#x76EE;&#x8FD0;&#x7B97;&#x7B26;"><a name="&#x4E09;&#x76EE;&#x8FD0;&#x7B97;&#x7B26;" class="anchor-navigation-ex-anchor" href="#&#x4E09;&#x76EE;&#x8FD0;&#x7B97;&#x7B26;"><i class="fa fa-link" aria-hidden="true"></i></a>9.6. &#x4E09;&#x76EE;&#x8FD0;&#x7B97;&#x7B26;</h3>
+<p>&#x200B;        A:&#x683C;&#x5F0F;</p>
+<p>&#x200B;            &#x6BD4;&#x8F83;&#x8868;&#x8FBE;&#x5F0F;?&#x8868;&#x8FBE;&#x5F0F;1:&#x8868;&#x8FBE;&#x5F0F;2;</p>
+<p>&#x200B;        B:&#x6267;&#x884C;&#x6D41;&#x7A0B;&#xFF1A;</p>
+<p>&#x200B;            &#x9996;&#x5148;&#x8BA1;&#x7B97;&#x6BD4;&#x8F83;&#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x503C;&#xFF0C;&#x770B;&#x662F;true&#x8FD8;&#x662F;false&#x3002;</p>
+<p>&#x200B;            &#x5982;&#x679C;&#x662F;true&#xFF0C;&#x8868;&#x8FBE;&#x5F0F;1&#x5C31;&#x662F;&#x7ED3;&#x679C;&#x3002;</p>
+<p>&#x200B;            &#x5982;&#x679C;&#x662F;false&#xFF0C;&#x8868;&#x8FBE;&#x5F0F;2&#x5C31;&#x662F;&#x7ED3;&#x679C;&#x3002;</p>
+<p>&#x200B;        C:&#x6848;&#x4F8B;&#xFF1A;</p>
+<p>&#x200B;            a:&#x6BD4;&#x8F83;&#x4E24;&#x4E2A;&#x6570;&#x636E;&#x662F;&#x5426;&#x76F8;&#x7B49;</p>
+<p>&#x200B;            b:&#x83B7;&#x53D6;&#x4E24;&#x4E2A;&#x6570;&#x636E;&#x4E2D;&#x7684;&#x6700;&#x5927;&#x503C;</p>
+<p>&#x200B;            c:&#x83B7;&#x53D6;&#x4E09;&#x4E2A;&#x6570;&#x636E;&#x4E2D;&#x7684;&#x6700;&#x5927;&#x503C;</p>
+<pre><code class="lang-java"><span class="hljs-comment">/*
+    &#x5355;&#x76EE;&#x8FD0;&#x7B97;&#x7B26;&#xFF1A;~3
+    &#x53CC;&#x76EE;&#x8FD0;&#x7B97;&#x7B26;&#xFF1A;3 + 4
+
+    &#x4E09;&#x76EE;&#x8FD0;&#x7B97;&#x7B26;&#xFF1A;
+        &#x683C;&#x5F0F;&#xFF1A;&#x6BD4;&#x8F83;&#x8868;&#x8FBE;&#x5F0F;?&#x8868;&#x8FBE;&#x5F0F;1:&#x8868;&#x8FBE;&#x5F0F;2;
+
+        &#x6BD4;&#x8F83;&#x8868;&#x8FBE;&#x5F0F;:&#x7ED3;&#x679C;&#x662F;&#x4E00;&#x4E2A;boolean&#x7C7B;&#x578B;&#x3002;
+
+        &#x6267;&#x884C;&#x6D41;&#x7A0B;&#xFF1A;
+            &#x6839;&#x636E;&#x6BD4;&#x8F83;&#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x8BA1;&#x7B97;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;true&#x6216;&#x8005;false&#x3002;
+            &#x5982;&#x679C;&#x662F;true&#xFF0C;&#x5C31;&#x628A;&#x8868;&#x8FBE;&#x5F0F;1&#x4F5C;&#x4E3A;&#x7ED3;&#x679C;&#x3002;
+            &#x5982;&#x679C;&#x662F;false&#xFF0C;&#x5C31;&#x628A;&#x8868;&#x8FBE;&#x5F0F;2&#x4F5C;&#x4E3A;&#x7ED3;&#x679C;&#x3002;
+*/</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">OperatorDemo</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        <span class="hljs-keyword">int</span> x = <span class="hljs-number">100</span>;
+        <span class="hljs-keyword">int</span> y = <span class="hljs-number">200</span>;
+
+        <span class="hljs-keyword">int</span> z = ((x &gt; y)? x: y);
+
+        <span class="hljs-comment">//int z = ((x &lt; y)? x: y);</span>
+
+        <span class="hljs-comment">//int z = ((x == y)? x: y);</span>
+
+        <span class="hljs-comment">//&#x62A5;&#x9519;</span>
+        <span class="hljs-comment">//int z = ((x = y)? x : y);</span>
+
+        System.out.println(<span class="hljs-string">&quot;z:&quot;</span>+z);
+    }
+}
+</code></pre>
+<pre><code class="lang-java"><span class="hljs-comment">/*
+    &#x7EC3;&#x4E60;&#xFF1A;
+        &#x83B7;&#x53D6;&#x4E24;&#x4E2A;&#x6574;&#x6570;&#x4E2D;&#x7684;&#x6700;&#x5927;&#x503C;
+        &#x83B7;&#x53D6;&#x4E09;&#x4E2A;&#x6574;&#x6570;&#x4E2D;&#x7684;&#x6700;&#x5927;&#x503C;
+        &#x6BD4;&#x8F83;&#x4E24;&#x4E2A;&#x6574;&#x6570;&#x662F;&#x5426;&#x76F8;&#x540C;
+*/</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">OperatorTest</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        <span class="hljs-comment">//&#x83B7;&#x53D6;&#x4E24;&#x4E2A;&#x6574;&#x6570;&#x4E2D;&#x7684;&#x6700;&#x5927;&#x503C;</span>
+        <span class="hljs-keyword">int</span> x = <span class="hljs-number">100</span>;
+        <span class="hljs-keyword">int</span> y = <span class="hljs-number">200</span>;
+
+        <span class="hljs-keyword">int</span> max = (x &gt; y? x: y);
+        System.out.println(<span class="hljs-string">&quot;max:&quot;</span>+max);
+        System.out.println(<span class="hljs-string">&quot;--------&quot;</span>);
+
+        <span class="hljs-comment">//&#x83B7;&#x53D6;&#x4E09;&#x4E2A;&#x6574;&#x6570;&#x4E2D;&#x7684;&#x6700;&#x5927;&#x503C;</span>
+        <span class="hljs-keyword">int</span> a = <span class="hljs-number">10</span>;
+        <span class="hljs-keyword">int</span> b = <span class="hljs-number">30</span>;
+        <span class="hljs-keyword">int</span> c = <span class="hljs-number">20</span>;
+
+        <span class="hljs-comment">//&#x5206;&#x4E24;&#x6B65;&#xFF1A;</span>
+        <span class="hljs-comment">//A:&#x5148;&#x6BD4;&#x8F83;a,b&#x7684;&#x6700;&#x5927;&#x503C;</span>
+        <span class="hljs-comment">//B:&#x62FF;a,b&#x7684;&#x6700;&#x5927;&#x503C;&#x5728;&#x548C;c&#x8FDB;&#x884C;&#x6BD4;&#x8F83;</span>
+        <span class="hljs-keyword">int</span> temp = ((a &gt; b)? a: b);
+        <span class="hljs-comment">//System.out.println(temp);</span>
+        <span class="hljs-keyword">int</span> max1 = (temp &gt; c? temp: c);
+        System.out.println(<span class="hljs-string">&quot;max1:&quot;</span>+max1);
+
+        <span class="hljs-comment">//&#x4E00;&#x6B65;&#x641E;&#x5B9A;</span>
+        <span class="hljs-comment">//int max2 = (a &gt; b)?((a &gt; c)? a: c):((b &gt; c)? b: c);</span>
+        <span class="hljs-comment">//&#x8FD9;&#x79CD;&#x505A;&#x6CD5;&#x4E0D;&#x63A8;&#x8350;&#x3002;</span>
+        <span class="hljs-comment">//int max2 = a &gt; b?a &gt; c? a: c:b &gt; c? b: c;</span>
+        <span class="hljs-comment">//System.out.println(&quot;max2:&quot;+max2);</span>
+        System.out.println(<span class="hljs-string">&quot;--------&quot;</span>);
+
+        <span class="hljs-comment">//&#x6BD4;&#x8F83;&#x4E24;&#x4E2A;&#x6574;&#x6570;&#x662F;&#x5426;&#x76F8;&#x540C;</span>
+        <span class="hljs-keyword">int</span> m = <span class="hljs-number">100</span>;
+        <span class="hljs-keyword">int</span> n = <span class="hljs-number">200</span>;
+
+        <span class="hljs-comment">//boolean flag = (m == n)? true: false;</span>
+        <span class="hljs-keyword">boolean</span> flag = (m == n);
+        System.out.println(flag);
+    }
+}
+</code></pre>
+<pre><code class="lang-html">&#x4F5C;&#x8005;: &#x609F;&#x7A7A;&#x975E;&#x7A7A;&#x4E5F;
+&#x94FE;&#x63A5;: https://wukongnotnull.github.io/javase-qingtong-wukongnote/basic-grammar/basic-grammar.html
+&#x6765;&#x6E90;: &#x609F;&#x7A7A;&#x975E;&#x7A7A;&#x4E5F;
+&#x672C;&#x6587;&#x539F;&#x521B;&#x53D1;&#x5E03;&#x4E8E;&#x300C;&#x609F;&#x7A7A;&#x975E;&#x7A7A;&#x4E5F;&#x300D;,&#x8F6C;&#x8F7D;&#x8BF7;&#x6CE8;&#x660E;&#x51FA;&#x5904;,&#x8C22;&#x8C22;&#x5408;&#x4F5C;!
+</code></pre>
+<p><img src="../asset/weixin/weixin-QR-code.jpg" alt="/asset/weixin/weixin-QR-code.jpg"> </p>
+<footer class="page-footer"><span class="copyright">&#xA9; &#x609F;&#x7A7A;&#x975E;&#x7A7A;&#x4E5F; all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;: 
+2021-08-07 17:04:09
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../java-introduction/first-program.html" class="navigation navigation-prev " aria-label="Previous page: first-program.md">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../flow-control/flow-control.html" class="navigation navigation-next " aria-label="Next page: 流程控制">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"基础语法","level":"4.1","depth":1,"next":{"title":"流程控制","level":"5.1","depth":1,"path":"flow-control/flow-control.md","ref":"flow-control/flow-control.md","articles":[]},"previous":{"title":"first-program.md","level":"3.1.6","depth":2,"path":"java-introduction/first-program.md","ref":"java-introduction/first-program.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-plus","splitter","-sharing","sharing-plus","chapter-fold","edit-link-plus","code","chart","favicon-absolute","github-buttons","advanced-emoji","copyright","tbfed-pagefooter","donate","diff","simple-mind-map","hide-element","audio_image","mermaid-gb3","baidu-tongji-with-multiple-channel","google-tongji-with-multiple-channel","icp","anchor-navigation-ex-toc","insert-logo-link-website","pageview-count","flexible-alerts","auto-scroll-table","accordion","sectionx","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy 悟空非空也","modify_label":"文件修订时间: ","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"diff":{"method":"diffChars","options":{},"type":"markdown"},"livereload":{},"baidu-tongji-with-multiple-channel":{"multipleChannelConfig":{},"url":"https://hm.baidu.com/hm.js"},"splitter":{},"google-tongji-with-multiple-channel":{"multipleChannelConfig":{},"url":"https://www.googletagmanager.com/gtag/js"},"copyright":{"copyProtect":false,"site":"https://wukongnotnull.github.io/javase-qingtong-wukongnote/","author":"悟空非空也","website":"悟空非空也","image":"/asset/weixin/weixin-QR-code.jpg"},"accordion":{},"edit-link-plus":{"label":"编辑本页","base":"https://github.com/WuKongNotNull/javase-qingtong-wukongnote/blob/main/"},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"auto-scroll-table":{},"code":{"copyButtons":true},"anchor-navigation-ex-toc":{"associatedWithSummary":true,"float":{"level1Icon":"fa fa-hand-o-right","level2Icon":"fa fa-hand-o-right","level3Icon":"fa fa-hand-o-right","showLevelIcon":true},"mode":"float","multipleH1":false,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showLevel":true},"donate":{"alipay":"/asset/pay/ali-pay.png","alipayText":"支付宝","button":"赞 👍 赏","title":"","wechat":"/asset/pay/wechat-pay.png","wechatText":"微信"},"favicon-absolute":{"appleTouchIconMore":{},"appleTouchIconPrecomposed152":"/apple-touch-icon-precomposed-152.png","appleTouchIconPrecomposedMore":{},"favicon":"asset/wukong-favicon.ico"},"hide-element":{"elements":["a.gitbook-link[href='https://www.gitbook.com']",".copyright"]},"fontsettings":{"theme":"white","family":"sans","size":2},"audio_image":{},"sectionx":{},"highlight":{},"mermaid-gb3":{},"insert-logo-link-website":{"link":"/index.html","style":"height: 100px","target":"_self","url":"/asset/wukong-favicon.ico"},"icp":{"link":"http://www.beian.miit.gov.cn/","style":{},"number":"苏ICP备2021034291号"},"pageview-count":{},"github-buttons":{"buttons":[{"user":"WuKongNotNull","repo":"javase-qingtong-wukongnote","type":"star","size":"small"}]},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"callout","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"}},"advanced-emoji":{"embedEmojis":false},"sharing":{"qq":true,"all":["facebook","google","twitter","weibo","instapaper","linkedin","pocket","stumbleupon"],"douban":true,"facebook":false,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":true,"linkedin":false},"simple-mind-map":{"autoFit":true,"linkShape":"diagonal","preset":"colorful","style":{},"type":"markdown"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"chart":{"type":"c3"},"search-plus":{}},"theme":"default","author":"悟空非空也","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"悟空非空也 - JavaSE 入门 - 青铜篇","language":"zh-hans","links":{"sidebar":{"科学上网":"https://github.com/WuKongNotNull/awesome-free-vpn","JetBrains 全家桶":"https://www.bilibili.com/read/cv11463068"}},"gitbook":"*","description":"悟空非空也宝藏集,个人博客 https://wukongnotnull.com/"},"file":{"path":"basic-grammar/basic-grammar.md","mtime":"2021-08-07T09:04:09.070Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-08-07T09:49:57.211Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-edit-link-plus/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-copyright/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-simple-mind-map/bundle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-mermaid-gb3/book/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-baidu-tongji-with-multiple-channel/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-google-tongji-with-multiple-channel/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-insert-logo-link-website/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-flexible-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-auto-scroll-table/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-accordion/accordionSelector.js"></script>
+        
+    
+        
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sectionx/sectionx.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    <script src="../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.min.js"></script>
+
+    </body>
+</html>
+
